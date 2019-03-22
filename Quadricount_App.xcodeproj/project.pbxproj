@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
+		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
+		87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE22A2244F87A00C0B64F /* Main.storyboard */; };
+		87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */; };
+		87FDE2312244F87C00C0B64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE2302244F87C00C0B64F /* Assets.xcassets */; };
+		87FDE2342244F87C00C0B64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */; };
+		87FDE23F2244F87C00C0B64F /* Quadricount_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE23E2244F87C00C0B64F /* Quadricount_AppTests.swift */; };
+		87FDE24A2244F87C00C0B64F /* Quadricount_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2492244F87C00C0B64F /* Quadricount_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87FDE23B2244F87C00C0B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87FDE21B2244F87A00C0B64F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FDE2222244F87A00C0B64F;
+			remoteInfo = Quadricount_App;
+		};
+		87FDE2462244F87C00C0B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87FDE21B2244F87A00C0B64F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FDE2222244F87A00C0B64F;
+			remoteInfo = Quadricount_App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87FDE2282244F87A00C0B64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87FDE22B2244F87A00C0B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87FDE22E2244F87A00C0B64F /* Quadricount_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quadricount_App.xcdatamodel; sourceTree = "<group>"; };
+		87FDE2302244F87C00C0B64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87FDE2332244F87C00C0B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87FDE2352244F87C00C0B64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FDE23A2244F87C00C0B64F /* Quadricount_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quadricount_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FDE23E2244F87C00C0B64F /* Quadricount_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadricount_AppTests.swift; sourceTree = "<group>"; };
+		87FDE2402244F87C00C0B64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FDE2452244F87C00C0B64F /* Quadricount_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quadricount_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FDE2492244F87C00C0B64F /* Quadricount_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadricount_AppUITests.swift; sourceTree = "<group>"; };
+		87FDE24B2244F87C00C0B64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87FDE2202244F87A00C0B64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2372244F87C00C0B64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2422244F87C00C0B64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87FDE21A2244F87A00C0B64F = {
+			isa = PBXGroup;
+			children = (
+				87FDE2252244F87A00C0B64F /* Quadricount_App */,
+				87FDE23D2244F87C00C0B64F /* Quadricount_AppTests */,
+				87FDE2482244F87C00C0B64F /* Quadricount_AppUITests */,
+				87FDE2242244F87A00C0B64F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87FDE2242244F87A00C0B64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87FDE2232244F87A00C0B64F /* Quadricount_App.app */,
+				87FDE23A2244F87C00C0B64F /* Quadricount_AppTests.xctest */,
+				87FDE2452244F87C00C0B64F /* Quadricount_AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87FDE2252244F87A00C0B64F /* Quadricount_App */ = {
+			isa = PBXGroup;
+			children = (
+				87FDE2262244F87A00C0B64F /* AppDelegate.swift */,
+				87FDE2282244F87A00C0B64F /* ViewController.swift */,
+				87FDE22A2244F87A00C0B64F /* Main.storyboard */,
+				87FDE2302244F87C00C0B64F /* Assets.xcassets */,
+				87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */,
+				87FDE2352244F87C00C0B64F /* Info.plist */,
+				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
+			);
+			path = Quadricount_App;
+			sourceTree = "<group>";
+		};
+		87FDE23D2244F87C00C0B64F /* Quadricount_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				87FDE23E2244F87C00C0B64F /* Quadricount_AppTests.swift */,
+				87FDE2402244F87C00C0B64F /* Info.plist */,
+			);
+			path = Quadricount_AppTests;
+			sourceTree = "<group>";
+		};
+		87FDE2482244F87C00C0B64F /* Quadricount_AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87FDE2492244F87C00C0B64F /* Quadricount_AppUITests.swift */,
+				87FDE24B2244F87C00C0B64F /* Info.plist */,
+			);
+			path = Quadricount_AppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87FDE2222244F87A00C0B64F /* Quadricount_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FDE24E2244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_App" */;
+			buildPhases = (
+				87FDE21F2244F87A00C0B64F /* Sources */,
+				87FDE2202244F87A00C0B64F /* Frameworks */,
+				87FDE2212244F87A00C0B64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quadricount_App;
+			productName = Quadricount_App;
+			productReference = 87FDE2232244F87A00C0B64F /* Quadricount_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87FDE2392244F87C00C0B64F /* Quadricount_AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FDE2512244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_AppTests" */;
+			buildPhases = (
+				87FDE2362244F87C00C0B64F /* Sources */,
+				87FDE2372244F87C00C0B64F /* Frameworks */,
+				87FDE2382244F87C00C0B64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87FDE23C2244F87C00C0B64F /* PBXTargetDependency */,
+			);
+			name = Quadricount_AppTests;
+			productName = Quadricount_AppTests;
+			productReference = 87FDE23A2244F87C00C0B64F /* Quadricount_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87FDE2442244F87C00C0B64F /* Quadricount_AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FDE2542244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_AppUITests" */;
+			buildPhases = (
+				87FDE2412244F87C00C0B64F /* Sources */,
+				87FDE2422244F87C00C0B64F /* Frameworks */,
+				87FDE2432244F87C00C0B64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87FDE2472244F87C00C0B64F /* PBXTargetDependency */,
+			);
+			name = Quadricount_AppUITests;
+			productName = Quadricount_AppUITests;
+			productReference = 87FDE2452244F87C00C0B64F /* Quadricount_AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87FDE21B2244F87A00C0B64F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Polytech Montpellier";
+				TargetAttributes = {
+					87FDE2222244F87A00C0B64F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					87FDE2392244F87C00C0B64F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 87FDE2222244F87A00C0B64F;
+					};
+					87FDE2442244F87C00C0B64F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 87FDE2222244F87A00C0B64F;
+					};
+				};
+			};
+			buildConfigurationList = 87FDE21E2244F87A00C0B64F /* Build configuration list for PBXProject "Quadricount_App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87FDE21A2244F87A00C0B64F;
+			productRefGroup = 87FDE2242244F87A00C0B64F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87FDE2222244F87A00C0B64F /* Quadricount_App */,
+				87FDE2392244F87C00C0B64F /* Quadricount_AppTests */,
+				87FDE2442244F87C00C0B64F /* Quadricount_AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87FDE2212244F87A00C0B64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FDE2342244F87C00C0B64F /* LaunchScreen.storyboard in Resources */,
+				87FDE2312244F87C00C0B64F /* Assets.xcassets in Resources */,
+				87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2382244F87C00C0B64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2432244F87C00C0B64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87FDE21F2244F87A00C0B64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
+				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
+				87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2362244F87C00C0B64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FDE23F2244F87C00C0B64F /* Quadricount_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FDE2412244F87C00C0B64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FDE24A2244F87C00C0B64F /* Quadricount_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87FDE23C2244F87C00C0B64F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87FDE2222244F87A00C0B64F /* Quadricount_App */;
+			targetProxy = 87FDE23B2244F87C00C0B64F /* PBXContainerItemProxy */;
+		};
+		87FDE2472244F87C00C0B64F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87FDE2222244F87A00C0B64F /* Quadricount_App */;
+			targetProxy = 87FDE2462244F87C00C0B64F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87FDE22A2244F87A00C0B64F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87FDE22B2244F87A00C0B64F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87FDE2332244F87C00C0B64F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87FDE24C2244F87C00C0B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87FDE24D2244F87C00C0B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87FDE24F2244F87C00C0B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87FDE2502244F87C00C0B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87FDE2522244F87C00C0B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quadricount_App.app/Quadricount_App";
+			};
+			name = Debug;
+		};
+		87FDE2532244F87C00C0B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quadricount_App.app/Quadricount_App";
+			};
+			name = Release;
+		};
+		87FDE2552244F87C00C0B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quadricount_App;
+			};
+			name = Debug;
+		};
+		87FDE2562244F87C00C0B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Quadricount_AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LG.Quadricount-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quadricount_App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87FDE21E2244F87A00C0B64F /* Build configuration list for PBXProject "Quadricount_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FDE24C2244F87C00C0B64F /* Debug */,
+				87FDE24D2244F87C00C0B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87FDE24E2244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FDE24F2244F87C00C0B64F /* Debug */,
+				87FDE2502244F87C00C0B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87FDE2512244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FDE2522244F87C00C0B64F /* Debug */,
+				87FDE2532244F87C00C0B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87FDE2542244F87C00C0B64F /* Build configuration list for PBXNativeTarget "Quadricount_AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FDE2552244F87C00C0B64F /* Debug */,
+				87FDE2562244F87C00C0B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87FDE22E2244F87A00C0B64F /* Quadricount_App.xcdatamodel */,
+			);
+			currentVersion = 87FDE22E2244F87A00C0B64F /* Quadricount_App.xcdatamodel */;
+			path = Quadricount_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87FDE21B2244F87A00C0B64F /* Project object */;
+}
