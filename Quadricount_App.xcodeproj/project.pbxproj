@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */; };
 		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
 		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
 		87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE22A2244F87A00C0B64F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewControiller.swift; sourceTree = "<group>"; };
 		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87FDE2282244F87A00C0B64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */,
 				87FDE2352244F87C00C0B64F /* Info.plist */,
 				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
+				1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */,
 			);
 			path = Quadricount_App;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
+				1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */,
 				87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

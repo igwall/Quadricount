@@ -62,7 +62,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MbE-1f-VOD" kind="show" id="ukD-oB-ACd"/>
+                                            <segue destination="MbE-1f-VOD" kind="show" identifier="viewTravelDetails" id="ukD-oB-ACd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -78,13 +78,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="dR0-ge-AwE"/>
+                        <barButtonItem title="Item" id="dR0-ge-AwE">
+                            <connections>
+                                <action selector="tmpButton:" destination="BYZ-38-t0r" id="xrH-iT-ZoM"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="My travels" id="hD6-BV-HVz">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="jDQ-MK-RTi"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="awt-aH-9T3"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="rE3-z8-3KW" id="63r-GF-ne7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
