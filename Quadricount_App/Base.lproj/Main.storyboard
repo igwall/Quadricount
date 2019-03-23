@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q3X-bB-V5W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajJ-2b-4kP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -86,7 +86,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="My travels" id="hD6-BV-HVz">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="jDQ-MK-RTi"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="awt-aH-9T3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="awt-aH-9T3">
+                            <connections>
+                                <segue destination="q3X-bB-V5W" kind="show" id="IOZ-Ik-jgG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -222,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCK-Pf-6Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949.5999999999999" y="902.69865067466276"/>
+            <point key="canvasLocation" x="1071" y="1030"/>
         </scene>
         <!--Item-->
         <scene sceneID="0i6-Mu-kJd">
