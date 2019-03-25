@@ -78,6 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DFC9CA522490B9900CBF238 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1DFC9CA622490BA200CBF238 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		87FDE21A2244F87A00C0B64F = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,8 @@
 		87FDE2252244F87A00C0B64F /* Quadricount_App */ = {
 			isa = PBXGroup;
 			children = (
+				1DFC9CA622490BA200CBF238 /* Models */,
+				1DFC9CA522490B9900CBF238 /* Controllers */,
 				87FDE2262244F87A00C0B64F /* AppDelegate.swift */,
 				87FDE2282244F87A00C0B64F /* ViewController.swift */,
 				87FDE22A2244F87A00C0B64F /* Main.storyboard */,
@@ -108,7 +125,6 @@
 				87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */,
 				87FDE2352244F87C00C0B64F /* Info.plist */,
 				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
-				1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */,
 			);
 			path = Quadricount_App;
 			sourceTree = "<group>";
