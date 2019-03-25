@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */; };
+		1DFC9CAA22490F7B00CBF238 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CA922490F7B00CBF238 /* Travel.swift */; };
+		1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */; };
+		1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB92249110F00CBF238 /* PersonDAO.swift */; };
+		1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBA2249110F00CBF238 /* PersonFetchResultController.swift */; };
+		1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBE2249111B00CBF238 /* PersonSet.swift */; };
+		1DFC9CC12249111B00CBF238 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBF2249111B00CBF238 /* Person.swift */; };
 		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
 		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
 		87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE22A2244F87A00C0B64F /* Main.storyboard */; };
@@ -37,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewControiller.swift; sourceTree = "<group>"; };
+		1DFC9CA922490F7B00CBF238 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Travel.swift; path = ../../../../../../../../Travel.swift; sourceTree = "<group>"; };
+		1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1DFC9CB92249110F00CBF238 /* PersonDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
+		1DFC9CBA2249110F00CBF238 /* PersonFetchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonFetchResultController.swift; sourceTree = "<group>"; };
+		1DFC9CBE2249111B00CBF238 /* PersonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
+		1DFC9CBF2249111B00CBF238 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87FDE2282244F87A00C0B64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,8 +101,21 @@
 		1DFC9CA622490BA200CBF238 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DFC9CBF2249111B00CBF238 /* Person.swift */,
+				1DFC9CBE2249111B00CBF238 /* PersonSet.swift */,
+				1DFC9CA922490F7B00CBF238 /* Travel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1DFC9CAF2249100C00CBF238 /* Persist */ = {
+			isa = PBXGroup;
+			children = (
+				1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */,
+				1DFC9CB92249110F00CBF238 /* PersonDAO.swift */,
+				1DFC9CBA2249110F00CBF238 /* PersonFetchResultController.swift */,
+			);
+			path = Persist;
 			sourceTree = "<group>";
 		};
 		87FDE21A2244F87A00C0B64F = {
@@ -116,6 +141,7 @@
 		87FDE2252244F87A00C0B64F /* Quadricount_App */ = {
 			isa = PBXGroup;
 			children = (
+				1DFC9CAF2249100C00CBF238 /* Persist */,
 				1DFC9CA622490BA200CBF238 /* Models */,
 				1DFC9CA522490B9900CBF238 /* Controllers */,
 				87FDE2262244F87A00C0B64F /* AppDelegate.swift */,
@@ -278,9 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFC9CC12249111B00CBF238 /* Person.swift in Sources */,
+				1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */,
+				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
+				1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */,
 				1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */,
+				1DFC9CAA22490F7B00CBF238 /* Travel.swift in Sources */,
+				1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */,
 				87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
