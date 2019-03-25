@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */; };
+		1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */; };
+		1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E72249576C00B66C7B /* AddTravelViewController.swift */; };
 		1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */; };
 		1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */; };
 		1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB92249110F00CBF238 /* PersonDAO.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
+		1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
+		1DB209E72249576C00B66C7B /* AddTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelViewController.swift; sourceTree = "<group>"; };
 		1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewControiller.swift; sourceTree = "<group>"; };
 		1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1DFC9CB92249110F00CBF238 /* PersonDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */,
+				1DB209E72249576C00B66C7B /* AddTravelViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 				1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */,
 				1DFC9CB92249110F00CBF238 /* PersonDAO.swift */,
 				1DFC9CBA2249110F00CBF238 /* PersonFetchResultController.swift */,
+				1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */,
 			);
 			path = Persist;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 				87FDE2302244F87C00C0B64F /* Assets.xcassets */,
 				87FDE2322244F87C00C0B64F /* LaunchScreen.storyboard */,
 				87FDE2352244F87C00C0B64F /* Info.plist */,
+				1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */,
 				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
 			);
 			path = Quadricount_App;
@@ -304,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */,
 				1DFC9CC12249111B00CBF238 /* Person.swift in Sources */,
+				1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */,
 				1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */,
 				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
 				1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */,
@@ -312,6 +323,7 @@
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
 				1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */,
 				1DF9EAB022466AB4001FA3E5 /* TravelTableViewControiller.swift in Sources */,
+				1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */,
 				1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */,
 				87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */,
 			);

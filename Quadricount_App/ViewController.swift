@@ -11,15 +11,24 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func tmpButton(_ sender: Any) {
-        print("coucou")
-    }
+    var travelTableViewController : TravelTableViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.travelTableViewController = TravelTableViewController(tableView: self.tableView)
     }
     
+    // MARK - Unwinds
+    
+    @IBAction func unwindToMainView(segue: UIStoryboardSegue){
+        if let controller = segue.source as? AddTravelViewController{
+            if let newTravel = controller.newTravel {
+                travelTableViewController.add(travel: newTravel)
+            }
+        }
+    }
     
 
 

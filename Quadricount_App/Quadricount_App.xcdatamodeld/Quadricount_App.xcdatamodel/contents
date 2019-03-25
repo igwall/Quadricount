@@ -5,7 +5,12 @@
         <attribute name="pfirstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plastname" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
+        <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Person" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Travel" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>
