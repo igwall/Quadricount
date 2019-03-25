@@ -39,13 +39,13 @@
 
 ## Expense
 
-- **init** : String x Float x Repartition x Repartition -> Expense
-- **init** : String x Float x Repartition x Repartition x Image -> Expense
+- **init** : String x Float x ContributionSet x ContributionSet -> Expense
+- **init** : String x Float x ContributionSet x ContributionSet x Image -> Expense
 - **name** : Expense -> String
 - **amount** : Expense -> Float
-- **buyers** : Expense -> Repartition
-- **attendees** : Expense -> Repartition
-- **picture** : Expense -> Repartition
+- **buyers** : Expense -> ContributionSet
+- **attendees** : Expense -> ContributionSet
+- **picture** : Expense -> ContributionSet
 
 ## ExpenseSet
 
