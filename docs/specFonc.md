@@ -8,13 +8,13 @@
 
 ## Travel
 
-- **init** : String x Image x Travellers -> Travel
+- **init** : String x Image x TravellerSet -> Travel
   - Creates a Travel
 - **name** : Travel ->  String
   - name of the travel
 - **picture** : Travel -> Image
   - picture of the travel
-- **persons** : Travel -> Travellers
+- **persons** : Travel -> TravellerSet
   - all the participants of the travel
 - **expences** : Travel -> ExpenseSet
   - expences of the travel  
@@ -32,10 +32,6 @@
 - **person** : Person
 - **incomingDate** : Date
 - **outgoingDate** : Date
-
-
-
-
 
 ## Expense
 
