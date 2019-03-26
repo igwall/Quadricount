@@ -60,7 +60,6 @@ class ViewModelTravelTable {
     public func delete(travelAt: Int){
         guard let travel = get(travelAt: travelAt) else { return }
         CoreDataManager.context.delete(travel)
-        CoreDataManager.save()
     }
     
     
