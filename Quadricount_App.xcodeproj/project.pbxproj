@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3F83E2224A76F800C1269F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E1224A76F800C1269F /* Expense.swift */; };
+		1D3F83E4224A791200C1269F /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E3224A791200C1269F /* Contribution.swift */; };
 		1DAE83E9224A0ABF00C03ED5 /* TravelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */; };
 		1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */; };
 		1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3F83E1224A76F800C1269F /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		1D3F83E3224A791200C1269F /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCell.swift; sourceTree = "<group>"; };
 		1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
 		1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				1DFC9CBE2249111B00CBF238 /* PersonSet.swift */,
 				1DFC9CC22249116A00CBF238 /* Travel.swift */,
 				87697D522249120B005C7FBB /* Traveller.swift */,
+				1D3F83E1224A76F800C1269F /* Expense.swift */,
+				1D3F83E3224A791200C1269F /* Contribution.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,12 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3F83E2224A76F800C1269F /* Expense.swift in Sources */,
 				1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */,
 				1DFC9CC12249111B00CBF238 /* Person.swift in Sources */,
 				1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */,
 				1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */,
 				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
 				1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */,
+				1D3F83E4224A791200C1269F /* Contribution.swift in Sources */,
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
 				1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */,
@@ -672,4 +680,3 @@
 	};
 	rootObject = 87FDE21B2244F87A00C0B64F /* Project object */;
 }
-

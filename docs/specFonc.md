@@ -49,10 +49,10 @@
 - **debt** : ExpenseSet -> Debt
 
 ## Debt
-- **init** : Person x Float x Person -> Debt
-- **giver** : Person
+- **init** : Traveller x Float x Traveller -> Debt
+- **giver** : Traveller
 - **amount** : Float
-- **receiver** : Person
+- **receiver** : Traveller
 
 ## DebtSet
 - **init** : [Debt] -> DebtSet
