@@ -19,11 +19,11 @@ class AddTravelViewController : UIViewController{
         
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addTravel" {
-            guard let name = nameLabel.text else { return }
-            self.newTravel = Travel(name: name, picture: UIImage())
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "addTravel" {
+                guard let name = nameLabel.text else { return }
+                self.newTravel = Travel(name: name, picture: UIImage())
+            }
         }
-    }
     
 }

@@ -29,5 +29,12 @@ extension Traveller {
         self.pendDate = endDate
     }
     
+    public static func ==(t1: Traveller, t2: Traveller) -> Bool {
+        return t1.person == t2.person
+    }
+    
+    public static func !=(t1: Traveller, t2: Traveller) -> Bool {
+        return !(t1.person == t2.person)
+    }
     
 }
