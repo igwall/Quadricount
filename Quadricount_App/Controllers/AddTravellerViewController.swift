@@ -30,20 +30,19 @@ class AddTravellerViewController: UIViewController{
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "mm-dd-yyyy"
             
-            guard let fDate = firstDate.text else {return}
-            let dateOne = dateFormatter.date(from: fDate)!
-            guard let sDate = secondDate.text else {
-                self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne)
-                return
+             if firstDate.text != "" {
+                guard let fDate = firstDate.text else {return}
+                let dateOne = dateFormatter.date(from: fDate)!
+                if secondDate.text != "" {
+                    guard let sDate = secondDate.text else {return}
+                    let dateTwo = dateFormatter.date(from: sDate)!
+                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo)
+                } else {
+                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne)
+                }
             }
-            
-            
-            let dateTwo = dateFormatter.date(from: sDate)!
-            self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo)
         }
     }
-    
-    
 }
 
 
