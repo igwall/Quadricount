@@ -624,7 +624,7 @@
                                                                             <rect key="frame" x="204.66666666666666" y="7" width="71.333333333333343" height="30"/>
                                                                             <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                            <textInputTraits key="textInputTraits"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weH-Mq-8zx">
                                                                             <rect key="frame" x="281" y="11.333333333333336" width="11" height="21"/>
@@ -887,6 +887,9 @@
                                 <rect key="frame" x="236" y="165" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choisir une image"/>
+                                <connections>
+                                    <action selector="chooseImageButton:" destination="5me-pv-f8A" eventType="touchUpInside" id="KKr-2i-sTw"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8p-x9-BId">
                                 <rect key="frame" x="16" y="211" width="343" height="227"/>
@@ -923,6 +926,7 @@
                         <viewLayoutGuide key="safeArea" id="MMr-45-35S"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="E8p-x9-BId" id="8NV-1j-4nx"/>
                         <outlet property="nameLabel" destination="prt-ml-y7t" id="HbF-W5-Y3C"/>
                     </connections>
                 </viewController>

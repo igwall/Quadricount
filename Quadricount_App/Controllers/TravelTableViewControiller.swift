@@ -31,13 +31,13 @@ class TravelTableViewController : NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "travelCell", for: indexPath) as! TravelCell
         if let travel = self.data.get(travelAt: indexPath.row){
             cell.travelName?.text = travel.name
-            //cell.travelImage?.image = travel.picture
+            cell.travelImage?.image = travel.picture
             
-            let url = URL(string: "https://i.pinimg.com/736x/6c/7f/87/6c7f877678abf1091a343c06edebd937--avatar-james-cameron-pandora.jpg")
+            /*let url = URL(string: "https://i.pinimg.com/736x/6c/7f/87/6c7f877678abf1091a343c06edebd937--avatar-james-cameron-pandora.jpg")
             let data = try? Data(contentsOf: url!)
             if let imageData = data {
                 cell.travelImage?.image = UIImage(data: imageData)
-            }
+            }*/
         }
         
         return cell
