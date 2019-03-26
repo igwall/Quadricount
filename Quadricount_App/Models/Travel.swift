@@ -20,26 +20,26 @@ extension Travel {
             self.pname = newValue
         }
     }
-    var picture : Data? {
+    var picture : UIImage? {
         get {
-            return self.pimage ?? nil
+            guard let image = self.pimage else { return nil }
+            return UIImage(data: image)
         }
         set {
-            self.pimage = newValue
+            self.pimage = newValue?.pngData()
         }
     }
     
-    public convenience init(name: String, picture: UIImage) {//, persons: Travellers, expences: ExpensesSet)
+    public convenience init(name: String, picture: UIImage?) {//, persons: Travellers, expences: ExpensesSet)
         self.init(context: CoreDataManager.context)
         self.pname = name;
-        self.picture = picture.pngData()
+        self.picture = picture
     }
     
 }
 
 class ViewModelTravelTable {
     public var travelFetched : NSFetchedResultsController<Travel>
-    
     public init(data : NSFetchedResultsController<Travel>){
         self.travelFetched = data
     }
@@ -56,5 +56,11 @@ class ViewModelTravelTable {
         //TODO On ne vérifie pas qu'un utilisateur existe déjà
         let indexPath = self.travelFetched.indexPath(forObject: travel)
     }
+    
+    public func delete(travelAt: Int){
+        guard let travel = get(travelAt: travelAt) else { return }
+        CoreDataManager.context.delete(travel)
+    }
+    
     
 }

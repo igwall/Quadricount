@@ -230,7 +230,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zl8-ka-rgi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="HIH-9l-WXb"/>
+                    <tabBarItem key="tabBarItem" title="Balance" image="balance" landscapeImage="balance" selectedImage="balance" id="HIH-9l-WXb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw7-q3-vcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,7 +325,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dqQ-oA-Zmc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="68N-Ne-3rf"/>
+                    <tabBarItem key="tabBarItem" title="Travellers" image="people" landscapeImage="people" selectedImage="people" id="68N-Ne-3rf"/>
                     <connections>
                         <outlet property="tableView" destination="eQr-S3-fxO" id="zN3-IM-ZXF"/>
                     </connections>
@@ -639,7 +639,7 @@
                                                                             <rect key="frame" x="204.66666666666666" y="7" width="71.333333333333343" height="30"/>
                                                                             <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                            <textInputTraits key="textInputTraits"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weH-Mq-8zx">
                                                                             <rect key="frame" x="281" y="11.333333333333336" width="11" height="21"/>
@@ -775,7 +775,7 @@
             </objects>
             <point key="canvasLocation" x="5268.75" y="1653.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Travel-->
         <scene sceneID="R0Y-Fb-kex">
             <objects>
                 <viewController id="QWd-8P-Gow" sceneMemberID="viewController">
@@ -844,7 +844,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wKn-e1-L1f"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="IGF-7a-lta"/>
+                    <tabBarItem key="tabBarItem" title="Travel" image="plane" landscapeImage="plane" id="IGF-7a-lta"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nht-Q1-SZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -902,6 +902,9 @@
                                 <rect key="frame" x="236" y="165" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choisir une image"/>
+                                <connections>
+                                    <action selector="chooseImageButton:" destination="5me-pv-f8A" eventType="touchUpInside" id="KKr-2i-sTw"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8p-x9-BId">
                                 <rect key="frame" x="16" y="211" width="343" height="227"/>
@@ -938,6 +941,7 @@
                         <viewLayoutGuide key="safeArea" id="MMr-45-35S"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="E8p-x9-BId" id="8NV-1j-4nx"/>
                         <outlet property="nameLabel" destination="prt-ml-y7t" id="HbF-W5-Y3C"/>
                     </connections>
                 </viewController>
@@ -964,11 +968,11 @@
             </objects>
             <point key="canvasLocation" x="132" y="132.68365817091455"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Expenses-->
         <scene sceneID="qC1-BJ-oB0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1gE-O7-XIr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="5qw-DX-8g2"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="card" landscapeImage="card" selectedImage="card" id="5qw-DX-8g2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pv4-uJ-L8T">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -984,4 +988,10 @@
             <point key="canvasLocation" x="3379.7101449275365" y="1657.3369565217392"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balance" width="30" height="30"/>
+        <image name="card" width="30" height="30"/>
+        <image name="people" width="30" height="30"/>
+        <image name="plane" width="30" height="30"/>
+    </resources>
 </document>
