@@ -18,11 +18,15 @@
 		1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBE2249111B00CBF238 /* PersonSet.swift */; };
 		1DFC9CC12249111B00CBF238 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBF2249111B00CBF238 /* Person.swift */; };
 		1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CC22249116A00CBF238 /* Travel.swift */; };
+		872BBB77224A8656003DD19E /* TravellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BBB76224A8656003DD19E /* TravellerViewController.swift */; };
 		8743A2A4224A2ABB00971E26 /* Traveller_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2A3224A2ABB00971E26 /* Traveller_Test.swift */; };
 		8743A2A7224A2B5700971E26 /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87697D522249120B005C7FBB /* Traveller.swift */; };
 		8743A2A8224A2B5B00971E26 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBF2249111B00CBF238 /* Person.swift */; };
 		8743A2AA224A2BDC00971E26 /* TravellerSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2A9224A2BDC00971E26 /* TravellerSet.swift */; };
 		8743A2AC224A359900971E26 /* AddTravellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2AB224A359900971E26 /* AddTravellerViewController.swift */; };
+		8743A2AE224A6D2800971E26 /* TravellerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2AD224A6D2800971E26 /* TravellerTableViewController.swift */; };
+		8743A2B0224A758000971E26 /* TravellerFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2AF224A758000971E26 /* TravellerFetchResultController.swift */; };
+		8743A2B2224A7EB700971E26 /* TravellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2B1224A7EB700971E26 /* TravellerCell.swift */; };
 		87697D532249120B005C7FBB /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87697D522249120B005C7FBB /* Traveller.swift */; };
 		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
 		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
@@ -63,9 +67,13 @@
 		1DFC9CBE2249111B00CBF238 /* PersonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
 		1DFC9CBF2249111B00CBF238 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1DFC9CC22249116A00CBF238 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		872BBB76224A8656003DD19E /* TravellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerViewController.swift; sourceTree = "<group>"; };
 		8743A2A3224A2ABB00971E26 /* Traveller_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveller_Test.swift; sourceTree = "<group>"; };
 		8743A2A9224A2BDC00971E26 /* TravellerSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerSet.swift; sourceTree = "<group>"; };
 		8743A2AB224A359900971E26 /* AddTravellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravellerViewController.swift; sourceTree = "<group>"; };
+		8743A2AD224A6D2800971E26 /* TravellerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTableViewController.swift; sourceTree = "<group>"; };
+		8743A2AF224A758000971E26 /* TravellerFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerFetchResultController.swift; sourceTree = "<group>"; };
+		8743A2B1224A7EB700971E26 /* TravellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerCell.swift; sourceTree = "<group>"; };
 		87697D522249120B005C7FBB /* Traveller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveller.swift; sourceTree = "<group>"; };
 		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,9 +119,11 @@
 		1DFC9CA522490B9900CBF238 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				872BBB76224A8656003DD19E /* TravellerViewController.swift */,
 				1DF9EAAF22466AB4001FA3E5 /* TravelTableViewControiller.swift */,
 				1DB209E72249576C00B66C7B /* AddTravelViewController.swift */,
 				8743A2AB224A359900971E26 /* AddTravellerViewController.swift */,
+				8743A2AD224A6D2800971E26 /* TravellerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 				1DFC9CB92249110F00CBF238 /* PersonDAO.swift */,
 				1DFC9CBA2249110F00CBF238 /* PersonFetchResultController.swift */,
 				1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */,
+				8743A2AF224A758000971E26 /* TravellerFetchResultController.swift */,
 			);
 			path = Persist;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 				1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */,
 				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
 				1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */,
+				8743A2B1224A7EB700971E26 /* TravellerCell.swift */,
 			);
 			path = Quadricount_App;
 			sourceTree = "<group>";
@@ -331,11 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */,
+				8743A2AE224A6D2800971E26 /* TravellerTableViewController.swift in Sources */,
 				1DFC9CC12249111B00CBF238 /* Person.swift in Sources */,
 				1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */,
 				1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */,
 				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
+				872BBB77224A8656003DD19E /* TravellerViewController.swift in Sources */,
 				1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */,
+				8743A2B2224A7EB700971E26 /* TravellerCell.swift in Sources */,
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
 				1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */,
@@ -345,6 +360,7 @@
 				8743A2AC224A359900971E26 /* AddTravellerViewController.swift in Sources */,
 				1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */,
 				87697D532249120B005C7FBB /* Traveller.swift in Sources */,
+				8743A2B0224A758000971E26 /* TravellerFetchResultController.swift in Sources */,
 				1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */,
 				87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */,
 			);
