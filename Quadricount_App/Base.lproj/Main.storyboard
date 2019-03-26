@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="102" id="qBn-12-Cql">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelCell" rowHeight="102" id="qBn-12-Cql">
                                         <rect key="frame" x="0.0" y="28" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qBn-12-Cql" id="z3n-9i-WHf">
@@ -227,7 +227,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zl8-ka-rgi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HIH-9l-WXb"/>
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="HIH-9l-WXb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw7-q3-vcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,9 +299,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-No-w30">
-                                <rect key="frame" x="193" y="70" width="166" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-No-w30">
+                                <rect key="frame" x="218" y="70" width="166" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title=" + Add a new traveller"/>
                                 <connections>
@@ -313,7 +312,9 @@
                         <constraints>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="leading" secondItem="dqQ-oA-Zmc" secondAttribute="leading" id="eVx-zr-uZQ"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="trailing" secondItem="dqQ-oA-Zmc" secondAttribute="trailing" id="hY9-DT-lH7"/>
+                            <constraint firstItem="dqQ-oA-Zmc" firstAttribute="trailing" secondItem="wX0-No-w30" secondAttribute="trailing" constant="30" id="hYQ-Ki-tNo"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="bottom" secondItem="dqQ-oA-Zmc" secondAttribute="bottom" id="nJA-fj-eXV"/>
+                            <constraint firstItem="wX0-No-w30" firstAttribute="top" secondItem="dqQ-oA-Zmc" secondAttribute="top" constant="6" id="s8W-UU-FG9"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="top" secondItem="dqQ-oA-Zmc" secondAttribute="top" constant="47" id="sHN-dw-sbi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dqQ-oA-Zmc"/>
