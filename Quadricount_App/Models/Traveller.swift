@@ -12,21 +12,22 @@ extension Traveller {
     
     // A traveller is composed by a person, a begin and end date.
     
-    public var person : Person { return self.pperson }
-    public var beginDate: Date { return self.pbeginDate }
-    public var endDate: Date { return self.pendDate }
+    public var person : Person? { return self.pperson }
+    public var beginDate: Date { return self.pbeginDate ?? Date() }
+    public var endDate: Date { return self.pendDate ?? Date()}
     
-    init(person: Person, beginDate: Date){
-        self.person = person
-        self.beginDate = beginDate
+    convenience init(person: Person, beginDate: Date){
+        self.init(context: CoreDataManager.context)
+        self.pperson = person
+        self.pbeginDate = beginDate
     }
     
     convenience init(person: Person, beginDate: Date, endDate: Date){
-        self.person = person
-        self.beginDate = beginDate
-        self.endDate = endDate
+        self.init(context: CoreDataManager.context)
+        self.pperson = person
+        self.pbeginDate = beginDate
+        self.pendDate = endDate
     }
-    
     
     
 }

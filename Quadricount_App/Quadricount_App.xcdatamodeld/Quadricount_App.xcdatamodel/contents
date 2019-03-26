@@ -4,15 +4,20 @@
         <attribute name="pbirthdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pfirstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plastname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ptraveller" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="pperson" inverseEntity="Traveller" syncable="YES"/>
     </entity>
     <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
         <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Traveller" representedClassName="Traveller" syncable="YES" codeGenerationType="class"/>
+    <entity name="Traveller" representedClassName="Traveller" syncable="YES" codeGenerationType="class">
+        <attribute name="pbeginDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pendDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="pperson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="ptraveller" inverseEntity="Person" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Person" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Travel" positionX="-54" positionY="18" width="128" height="75"/>
-        <element name="Traveller" positionX="-63" positionY="9" width="128" height="45"/>
+        <element name="Traveller" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>
