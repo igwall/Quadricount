@@ -19,21 +19,21 @@
     <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
         <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pTraveller" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Traveller" inverseName="ptravel" inverseEntity="Traveller" syncable="YES"/>
         <relationship name="pexpenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="ptravel" inverseEntity="Expense" syncable="YES"/>
+        <relationship name="pTraveller" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Traveller" inverseName="ptravel" inverseEntity="Traveller" syncable="YES"/>
     </entity>
     <entity name="Traveller" representedClassName="Traveller" syncable="YES" codeGenerationType="class">
         <attribute name="pbeginDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pendDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="pcontribution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contribution" inverseName="ptraveller" inverseEntity="Contribution" syncable="YES"/>
         <relationship name="pperson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="ptraveller" inverseEntity="Person" syncable="YES"/>
-        <relationship name="ptravel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Travel" inverseName="pTraveller" inverseEntity="Travel" syncable="YES"/>
+        <relationship name="ptravel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="pTraveller" inverseEntity="Travel" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Contribution" positionX="256.03125" positionY="35.4375" width="128" height="75"/>
+        <element name="Expense" positionX="242.703125" positionY="273.76953125" width="128" height="105"/>
         <element name="Person" positionX="-12.14453125" positionY="-88.11328125" width="128" height="105"/>
         <element name="Travel" positionX="-164.4140625" positionY="288.8671875" width="128" height="90"/>
-        <element name="Traveller" positionX="-253.47265625" positionY="20.26953125" width="128" height="105"/>
-        <element name="Expense" positionX="242.703125" positionY="273.76953125" width="128" height="105"/>
-        <element name="Contribution" positionX="256.03125" positionY="35.4375" width="128" height="75"/>
+        <element name="Traveller" positionX="-253.47265625" positionY="20.26953125" width="128" height="118"/>
     </elements>
 </model>

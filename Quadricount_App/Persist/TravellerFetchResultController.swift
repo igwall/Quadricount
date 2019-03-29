@@ -11,9 +11,10 @@ import CoreData
 
 class TravellerFetchResultController : NSObject, NSFetchedResultsControllerDelegate {
     let tableView : UITableView
-    
-    init(view: UITableView){
+    let travel : Travel
+    init(view: UITableView, travel: Travel){
         self.tableView = view
+        self.travel = travel
         super.init()
         do {
             try self.travellerFetched.performFetch()
@@ -26,6 +27,7 @@ class TravellerFetchResultController : NSObject, NSFetchedResultsControllerDeleg
     
     private func getFetchRequestController() -> NSFetchedResultsController<Traveller> {
         let request : NSFetchRequest<Traveller> = Traveller.fetchRequest()
+        request.predicate = NSPredicate(format: "ptravel == %@" , self.travel )
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Traveller.pperson.pfirstname),ascending:true),NSSortDescriptor(key:#keyPath(Traveller.pperson.plastname),ascending:true)]
         let fetchRequestController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchRequestController.delegate = self

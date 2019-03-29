@@ -13,9 +13,10 @@ class TravellerViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var tabViewController : TravellerTableViewController!
+    var travel : Travel! // On force car on sait que l'on va nous passer un travel dans tous les cas
     
     override func viewDidLoad() {
-        self.tabViewController = TravellerTableViewController(tableView: self.tableView)
+        self.tabViewController = TravellerTableViewController(tableView: self.tableView,travel: self.travel)
     }
     
     @IBAction func unwindToTravellerTable(_ unwindSegue: UIStoryboardSegue) {

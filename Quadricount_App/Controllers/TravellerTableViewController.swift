@@ -14,11 +14,13 @@ class TravellerTableViewController : NSObject, UITableViewDataSource {
     var table: UITableView
     var fetchResultController : TravellerFetchResultController
     var data : ViewModelTravellerTable
+    var travel : Travel
     
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, travel: Travel){
         self.table = tableView
-        self.fetchResultController = TravellerFetchResultController(view: tableView)
+        self.travel = travel
+        self.fetchResultController = TravellerFetchResultController(view: tableView, travel: self.travel)
         self.data = ViewModelTravellerTable(data: fetchResultController.travellerFetched)
         super.init()
         self.table.dataSource = self
