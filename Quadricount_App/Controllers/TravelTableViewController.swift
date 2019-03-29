@@ -9,18 +9,21 @@
 import Foundation
 import UIKit
 
-class TravelTableViewController : NSObject, UITableViewDataSource {
+class TravelTableViewController : NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var table : UITableView
     var fetchResultController : TravelFetchResultController
     var data : ViewModelTravelTable
+    var upperController : UIViewController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, upperController: UIViewController){
         self.table = tableView
+        self.upperController = upperController
         self.fetchResultController = TravelFetchResultController(view: tableView)
         self.data = ViewModelTravelTable(data: fetchResultController.travelFetched)
         super.init()
         self.table.dataSource = self
+        self.table.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +45,15 @@ class TravelTableViewController : NSObject, UITableViewDataSource {
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let travel = self.data.get(travelAt: indexPath.row){
+            if let controller = self.upperController as? TravelViewController {
+                controller.selectedTravel = travel
+                controller.performSegue(withIdentifier: "selectedTravel", sender: self)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
