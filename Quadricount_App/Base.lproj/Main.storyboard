@@ -352,6 +352,9 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUp-Fb-zDr">
                                 <rect key="frame" x="0.0" y="20" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ghe-LZ-dgO" id="sMd-ON-NF0"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new person : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-dh-g42">
                                 <rect key="frame" x="34" y="222" width="346" height="21"/>
@@ -465,10 +468,12 @@
                         <outlet property="firstDate" destination="e7T-X2-4f6" id="b4p-LX-MyD"/>
                         <outlet property="firstName" destination="22E-tU-G5K" id="59L-hj-wu9"/>
                         <outlet property="lastName" destination="3hZ-Qu-ZEu" id="JgI-iR-xpT"/>
+                        <outlet property="list" destination="tUp-Fb-zDr" id="oXr-sb-Gau"/>
                         <outlet property="secondDate" destination="rzN-kF-a22" id="nHZ-e7-7zN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sL-bM-OKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ghe-LZ-dgO"/>
                 <exit id="Vpx-g6-uLX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4247.826086956522" y="2323.3695652173915"/>

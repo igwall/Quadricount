@@ -18,9 +18,12 @@ class AddTravellerViewController: UIViewController{
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var firstDate: UITextField!
+    @IBOutlet weak var list: UIPickerView!
     @IBOutlet weak var secondDate: UITextField!
+    var listOfPerson : [Person]?
     
     override func viewDidLoad() {
+        self.listOfPerson = PersonDAO.fetchAll()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

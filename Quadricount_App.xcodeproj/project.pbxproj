@@ -31,6 +31,7 @@
 		8743A2B0224A758000971E26 /* TravellerFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2AF224A758000971E26 /* TravellerFetchResultController.swift */; };
 		8743A2B2224A7EB700971E26 /* TravellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2B1224A7EB700971E26 /* TravellerCell.swift */; };
 		87697D532249120B005C7FBB /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87697D522249120B005C7FBB /* Traveller.swift */; };
+		87F572DC224E7300002A1E99 /* AddTravellerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */; };
 		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
 		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
 		87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE22A2244F87A00C0B64F /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		8743A2AF224A758000971E26 /* TravellerFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerFetchResultController.swift; sourceTree = "<group>"; };
 		8743A2B1224A7EB700971E26 /* TravellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerCell.swift; sourceTree = "<group>"; };
 		87697D522249120B005C7FBB /* Traveller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveller.swift; sourceTree = "<group>"; };
+		87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravellerPickerViewController.swift; sourceTree = "<group>"; };
 		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87FDE2282244F87A00C0B64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				872BBB76224A8656003DD19E /* TravellerViewController.swift */,
 				8743A2AB224A359900971E26 /* AddTravellerViewController.swift */,
 				8743A2AD224A6D2800971E26 /* TravellerTableViewController.swift */,
+				87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
 				872BBB77224A8656003DD19E /* TravellerViewController.swift in Sources */,
 				1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */,
+				87F572DC224E7300002A1E99 /* AddTravellerPickerViewController.swift in Sources */,
 				8743A2B2224A7EB700971E26 /* TravellerCell.swift in Sources */,
 				1D3F83E4224A791200C1269F /* Contribution.swift in Sources */,
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
