@@ -12,6 +12,7 @@ import UIKit
 class AddTravellerViewController: UIViewController{
     
     var newTraveller : Traveller?
+    var currentTravel : Travel!
     
     // DATA FROM VIEW FOR CONTROLLER
     @IBOutlet weak var firstName: UITextField!
@@ -36,9 +37,9 @@ class AddTravellerViewController: UIViewController{
                 if secondDate.text != "" {
                     guard let sDate = secondDate.text else {return}
                     let dateTwo = dateFormatter.date(from: sDate)!
-                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo)
+                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
                 } else {
-                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne)
+                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, travel: self.currentTravel)
                 }
             }
         }

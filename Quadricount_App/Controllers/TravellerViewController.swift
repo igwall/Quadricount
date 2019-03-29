@@ -15,7 +15,7 @@ class TravellerViewController : UIViewController {
     var tabViewController : TravellerTableViewController!
     var travel : Travel! // On force car on sait que l'on va nous passer un travel dans tous les cas
     
-    override func viewDidLoad() {
+    public func initializeController(){
         self.tabViewController = TravellerTableViewController(tableView: self.tableView,travel: self.travel)
     }
     
@@ -26,5 +26,13 @@ class TravellerViewController : UIViewController {
             }
         }
         // Use data from the view controller which initiated the unwind segue
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTraveller" {
+            if let dest = segue.destination as? AddTravellerViewController {
+                dest.currentTravel = self.travel
+            }
+        }
     }
 }

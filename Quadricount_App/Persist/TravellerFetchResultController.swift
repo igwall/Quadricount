@@ -27,7 +27,7 @@ class TravellerFetchResultController : NSObject, NSFetchedResultsControllerDeleg
     
     private func getFetchRequestController() -> NSFetchedResultsController<Traveller> {
         let request : NSFetchRequest<Traveller> = Traveller.fetchRequest()
-        request.predicate = NSPredicate(format: "ptravel == %@" , self.travel )
+        request.predicate = NSPredicate(format: "ptravel.pname == %@" , self.travel.name )
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Traveller.pperson.pfirstname),ascending:true),NSSortDescriptor(key:#keyPath(Traveller.pperson.plastname),ascending:true)]
         let fetchRequestController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchRequestController.delegate = self

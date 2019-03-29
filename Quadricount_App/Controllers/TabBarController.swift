@@ -18,10 +18,11 @@ class TabBarController : UITabBarController , UITabBarControllerDelegate{
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
-        /*if let controller = viewController as? TravellerViewController {
+        if let controller = viewController as? TravellerViewController {
             controller.travel = self.travel
-        }*/
+            controller.initializeController()
+
+        }
     }
     
 }

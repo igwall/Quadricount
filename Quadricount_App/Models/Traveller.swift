@@ -13,26 +13,62 @@ extension Traveller {
     
     // A traveller is composed by a person, a begin and end date.
     
-    public var person : Person? { return self.pperson }
-    public var beginDate: Date { return self.pbeginDate ?? Date() }
-    public var endDate: Date { return self.pendDate ?? Date()}
+    public var person : Person? {
+        get {
+            return self.pperson
+        }
+
+        set {
+            self.pperson = newValue
+        }
+    }
+    
+    public var beginDate: Date {
+        get {
+            return self.pbeginDate ?? Date()
+        }
+        
+        set {
+            self.pbeginDate = newValue
+        }
+    }
+    
+    public var endDate: Date {
+        get {
+            return self.pendDate ?? Date()
+        }
+        set {
+            self.pendDate = newValue
+        }
+    }
+    
     public var fullname : String {
         guard let p = person else { return "" }
         return p.fullname
     }
     
-    
-    convenience init(person: Person, beginDate: Date){
-        self.init(context: CoreDataManager.context)
-        self.pperson = person
-        self.pbeginDate = beginDate
+    public var travel : Travel? {
+        get {
+            return self.ptravel
+        }
+        set {
+            self.ptravel = newValue
+        }
     }
     
-    convenience init(person: Person, beginDate: Date, endDate: Date){
+    convenience init(person: Person, beginDate: Date, travel: Travel){
         self.init(context: CoreDataManager.context)
-        self.pperson = person
-        self.pbeginDate = beginDate
-        self.pendDate = endDate
+        self.person = person
+        self.beginDate = beginDate
+        self.travel = travel
+    }
+    
+    convenience init(person: Person, beginDate: Date, endDate: Date, travel : Travel){
+        self.init(context: CoreDataManager.context)
+        self.person = person
+        self.beginDate = beginDate
+        self.endDate = endDate
+        self.travel = travel
     }
     
     public static func ==(t1: Traveller, t2: Traveller) -> Bool {
