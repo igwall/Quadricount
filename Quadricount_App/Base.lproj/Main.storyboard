@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajJ-2b-4kP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajJ-2b-4kP">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -447,7 +447,6 @@
                             <constraint firstItem="rzN-kF-a22" firstAttribute="leading" secondItem="vK6-0O-0sP" secondAttribute="trailing" constant="54" id="k3z-tE-9db"/>
                             <constraint firstItem="vK6-0O-0sP" firstAttribute="leading" secondItem="nja-VC-skF" secondAttribute="leading" constant="34" id="lan-xL-MPo"/>
                             <constraint firstItem="22E-tU-G5K" firstAttribute="top" secondItem="J2W-dh-g42" secondAttribute="bottom" constant="12" id="ms0-5l-qVP"/>
-                            <constraint firstItem="9ZK-s9-Xov" firstAttribute="top" secondItem="rzN-kF-a22" secondAttribute="bottom" constant="298" id="prQ-kq-99B"/>
                             <constraint firstItem="2ll-WK-W5h" firstAttribute="top" secondItem="J2W-dh-g42" secondAttribute="bottom" constant="16" id="qqH-DO-iSk"/>
                             <constraint firstItem="3hZ-Qu-ZEu" firstAttribute="top" secondItem="J2W-dh-g42" secondAttribute="bottom" constant="51" id="rqq-T1-QuZ"/>
                             <constraint firstItem="TD6-kH-Uoq" firstAttribute="top" secondItem="XRN-JT-Oyb" secondAttribute="bottom" constant="12" id="rxl-FG-M0F"/>
