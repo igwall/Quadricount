@@ -40,6 +40,7 @@ class AddTravellerViewController: UIViewController{
                     self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
                 } else {
                     self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, travel: self.currentTravel)
+                    CoreDataManager.save()
                 }
             }
         }

@@ -24,12 +24,6 @@ class TravellerViewController : UIViewController {
     }
     
     @IBAction func unwindToTravellerTable(_ unwindSegue: UIStoryboardSegue) {
-        if let sourceViewController = unwindSegue.source as? AddTravellerViewController {
-            if let traveller = sourceViewController.newTraveller {
-                self.tabViewController.add(traveller: traveller)
-            }
-        }
-        // Use data from the view controller which initiated the unwind segue
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -33,9 +33,9 @@ extension Traveller {
         }
     }
     
-    public var endDate: Date {
+    public var endDate: Date? {
         get {
-            return self.pendDate ?? Date()
+            return self.pendDate
         }
         set {
             self.pendDate = newValue

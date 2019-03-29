@@ -12,5 +12,7 @@ import UIKit
 class TravellerCell : UITableViewCell {
     
     @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var beginDate: UILabel!
+    @IBOutlet weak var endDate: UILabel!
     
 }

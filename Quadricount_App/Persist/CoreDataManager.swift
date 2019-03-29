@@ -22,6 +22,7 @@ class CoreDataManager {
         return appDelegate.persistentContainer.viewContext
     }
     
+    @discardableResult
     class func save() -> NSError? {
         do {
             try CoreDataManager.context.save()

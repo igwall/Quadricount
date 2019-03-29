@@ -24,7 +24,6 @@
 		1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CC22249116A00CBF238 /* Travel.swift */; };
 		872BBB77224A8656003DD19E /* TravellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BBB76224A8656003DD19E /* TravellerViewController.swift */; };
 		8743A2A4224A2ABB00971E26 /* Traveller_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2A3224A2ABB00971E26 /* Traveller_Test.swift */; };
-		8743A2A7224A2B5700971E26 /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87697D522249120B005C7FBB /* Traveller.swift */; };
 		8743A2A8224A2B5B00971E26 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CBF2249111B00CBF238 /* Person.swift */; };
 		8743A2AA224A2BDC00971E26 /* TravellerSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2A9224A2BDC00971E26 /* TravellerSet.swift */; };
 		8743A2AC224A359900971E26 /* AddTravellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743A2AB224A359900971E26 /* AddTravellerViewController.swift */; };
@@ -387,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				87FDE23F2244F87C00C0B64F /* Quadricount_AppTests.swift in Sources */,
-				8743A2A7224A2B5700971E26 /* Traveller.swift in Sources */,
 				8743A2A8224A2B5B00971E26 /* Person.swift in Sources */,
 				8743A2A4224A2ABB00971E26 /* Traveller_Test.swift in Sources */,
 			);
