@@ -15,13 +15,18 @@ class AddExpenseViewController : UIViewController {
     var currentTravel : Travel!
     var expenseSet : ExpenseSet!
     
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var amountField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddExpense" {
-            self.newExpense = Expense(name: "Resto", amount: 50.0, travel: currentTravel)
-            if let expenseCreated = self.newExpense {
-                self.expenseSet.add(expense: expenseCreated)
+            if let name = nameField.text, let date = dateField.text, let amount = Float(amountField.text ?? "0"){
+                self.newExpense = Expense(name: name, amount: amount, travel: currentTravel)
+                if let expenseCreated = self.newExpense {
+                    self.expenseSet.add(expense: expenseCreated)
+                }
             }
-            
         }
     }
 }

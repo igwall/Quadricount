@@ -578,17 +578,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w84-zT-uZF">
                                                 <rect key="frame" x="30" y="20" width="354" height="20.333333333333329"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel name :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg7-YL-cdx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="20.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense name :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg7-YL-cdx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of travel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6FG-AD-MrS">
-                                                        <rect key="frame" x="106.33333333333336" y="0.0" width="247.66666666666663" height="20.333333333333332"/>
+                                                        <rect key="frame" x="125.66666666666664" y="0.0" width="228.33333333333337" height="20.333333333333332"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Yzi-2v-NrR" id="x4o-6e-tSN"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -606,7 +609,7 @@
                                                         <rect key="frame" x="74.333333333333343" y="0.0" width="279.66666666666663" height="20.333333333333332"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -625,6 +628,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Yzi-2v-NrR" id="Rbb-63-prR"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -733,6 +739,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt9-4x-kXU">
                                                         <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="30"/>
                                                         <state key="normal" title="Cancel"/>
+                                                        <connections>
+                                                            <segue destination="yVh-Zr-D26" kind="unwind" unwindAction="unwindToExpenseView:" id="ISJ-Iq-rXk"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-7I-H3y">
                                                         <rect key="frame" x="205.66666666666663" y="0.0" width="208.33333333333337" height="30"/>
@@ -787,8 +796,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqU-Qb-q3q"/>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="RXs-yr-zaf" id="wZQ-3e-pmp"/>
+                        <outlet property="dateField" destination="d6c-FJ-uEW" id="tZD-qn-Tsb"/>
+                        <outlet property="nameField" destination="6FG-AD-MrS" id="hwT-hq-jYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXt-Gn-KF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Yzi-2v-NrR" customClass="GeneralTextFieldDelegate" customModule="Quadricount_App" customModuleProvider="target"/>
                 <exit id="yVh-Zr-D26" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4361" y="1621"/>
@@ -916,6 +931,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BCJ-Qt-EEF" id="Ffw-xA-SL9"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -988,6 +1006,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7u-N7-hFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="BCJ-Qt-EEF" customClass="GeneralTextFieldDelegate" customModule="Quadricount_App" customModuleProvider="target"/>
                 <exit id="JaC-5R-7sV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1893" y="-657"/>

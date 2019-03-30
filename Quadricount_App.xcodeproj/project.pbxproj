@@ -17,6 +17,7 @@
 		1D79097E224E7F6B00B001AF /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D79097D224E7F6B00B001AF /* ExpenseViewController.swift */; };
 		1D790980224E823100B001AF /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D79097F224E823100B001AF /* ExpenseCell.swift */; };
 		1D790982224E86B800B001AF /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D790981224E86B800B001AF /* AddExpenseViewController.swift */; };
+		1D790984224F926B00B001AF /* GeneralTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D790983224F926B00B001AF /* GeneralTextFieldDelegate.swift */; };
 		1DAE83E9224A0ABF00C03ED5 /* TravelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */; };
 		1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */; };
 		1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */; };
@@ -74,6 +75,7 @@
 		1D79097D224E7F6B00B001AF /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
 		1D79097F224E823100B001AF /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
 		1D790981224E86B800B001AF /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		1D790983224F926B00B001AF /* GeneralTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextFieldDelegate.swift; sourceTree = "<group>"; };
 		1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCell.swift; sourceTree = "<group>"; };
 		1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
 		1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				1D790974224E6D4D00B001AF /* Travel */,
 				1D790973224E6D3E00B001AF /* Traveller */,
 				1D790971224E43BB00B001AF /* TabBarController.swift */,
+				1D790983224F926B00B001AF /* GeneralTextFieldDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				8743A2AC224A359900971E26 /* AddTravellerViewController.swift in Sources */,
 				1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */,
 				87697D532249120B005C7FBB /* Traveller.swift in Sources */,
+				1D790984224F926B00B001AF /* GeneralTextFieldDelegate.swift in Sources */,
 				1D79097A224E72B900B001AF /* ExpenseDAO.swift in Sources */,
 				8743A2B0224A758000971E26 /* TravellerFetchResultController.swift in Sources */,
 				1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */,
