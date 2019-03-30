@@ -11,8 +11,8 @@ import CoreData
 
 public class PersonSet {
     
-    fileprivate var content : [Person]
-    private var listOfDeleguate : [PersonSetModelDelegate]?
+    var content : [Person]
+    var delegate : PersonSetModelDelegate? = nil
     
     public var isEmpty : Bool {
         return self.content.isEmpty
@@ -22,20 +22,28 @@ public class PersonSet {
         return self.content.count
     }
     
-    public init(delegate: PersonSetModelDelegate? = nil){
+    public init(){
         if let res = PersonDAO.fetchAll() {
             self.content = res
         }else {
             self.content = [Person]()
         }
-        guard let res = delegate else {return}
-        listOfDeleguate?.append(res)
     }
     
-    public init(with : [Person], delegate: PersonSetModelDelegate? = nil){
+    func addDelegate(delegate: PersonSetModelDelegate){
+        self.delegate = delegate
+    }
+    
+    func getPerson(index: Int) -> Person?{
+        guard index >= 0 && index < self.count
+            else {return nil}
+        return content[index]
+    }
+    
+    public init(with : [Person]){
         self.content = with
         guard let res = delegate else {return}
-        listOfDeleguate?.append(res)
+        self.delegate = res
     }
     
     public func add(person : Person){
@@ -57,5 +65,7 @@ public class PersonSet {
 }
 
 public protocol PersonSetModelDelegate {
-    
+    func personAdded(at indexPath: IndexPath)
+    func personUpdated(at indexPath: IndexPath)
+    func personDeleted(at indexPath: IndexPath)
 }

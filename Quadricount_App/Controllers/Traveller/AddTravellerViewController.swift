@@ -13,24 +13,38 @@ class AddTravellerViewController: UIViewController{
     
     var newTraveller : Traveller?
     var currentTravel : Travel!
+    var pickerController : AddTravellerPickerViewController!
     
     // DATA FROM VIEW FOR CONTROLLER
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var firstDate: UITextField!
-    @IBOutlet weak var list: UIPickerView!
+    @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var secondDate: UITextField!
     var listOfPerson : [Person]?
+    var personExisting : Person?
     
     override func viewDidLoad() {
         self.listOfPerson = PersonDAO.fetchAll()
+        self.pickerController = AddTravellerPickerViewController(pickerView: picker)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddTraveller" {
-            guard let fname = firstName.text else {return}
-            guard let lname = lastName.text else {return}
-            let tempPerson = Person(fn: fname, ln: lname)
+            var newPerson : Person
+            personExisting = pickerController.selectedPerson
+            // Si on a un nom et un prenom
+            if let fname = firstName.text, !fname.isEmpty {
+                if let lname = lastName.text, !lname.isEmpty {
+                    newPerson = Person(fn: fname, ln: lname)
+                } else{
+                    fatalError("Vous n'avez pas mis de nom")
+                }
+            } else {
+                guard let res = personExisting else{ return }
+                newPerson = res
+            }
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "mm-dd-yyyy"
             
@@ -40,9 +54,9 @@ class AddTravellerViewController: UIViewController{
                 if secondDate.text != "" {
                     guard let sDate = secondDate.text else {return}
                     let dateTwo = dateFormatter.date(from: sDate)!
-                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
+                    self.newTraveller = Traveller(person: newPerson, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
                 } else {
-                    self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, travel: self.currentTravel)
+                    self.newTraveller = Traveller(person: newPerson, beginDate: dateOne, travel: self.currentTravel)
                 }
                 CoreDataManager.save()
             }
