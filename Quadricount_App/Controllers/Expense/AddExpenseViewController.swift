@@ -13,12 +13,15 @@ class AddExpenseViewController : UIViewController {
     
     var newExpense : Expense?
     var currentTravel : Travel!
+    var expenseSet : ExpenseSet!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddExpense" {
             self.newExpense = Expense(name: "Resto", amount: 50.0, travel: currentTravel)
+            if let expenseCreated = self.newExpense {
+                self.expenseSet.add(expense: expenseCreated)
+            }
             
-            //TODO NEED TO SAVE AND ADD TO LIST 
         }
     }
 }

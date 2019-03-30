@@ -23,6 +23,15 @@ class ExpenseViewController : UIViewController {
     }
     
     @IBAction func unwindToExpenseView(_ unwindSegue: UIStoryboardSegue) {
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addExpense" {
+            if let dest = segue.destination as? AddExpenseViewController {
+                dest.currentTravel = self.currentTravel
+                dest.expenseSet = self.tableViewController.data
+            }
+        }
     }
 }

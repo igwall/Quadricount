@@ -561,10 +561,10 @@
             </objects>
             <point key="canvasLocation" x="3379.7101449275365" y="1625.5434782608697"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Expense View Controller-->
         <scene sceneID="6pV-gP-08u">
             <objects>
-                <viewController id="u0h-v0-AkL" sceneMemberID="viewController">
+                <viewController id="u0h-v0-AkL" customClass="AddExpenseViewController" customModule="Quadricount_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xh8-yF-iAQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -733,15 +733,12 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt9-4x-kXU">
                                                         <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="30"/>
                                                         <state key="normal" title="Cancel"/>
-                                                        <connections>
-                                                            <segue destination="yVh-Zr-D26" kind="unwind" unwindAction="unwindToExpenseView:" id="Vql-gr-VbF"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-7I-H3y">
                                                         <rect key="frame" x="205.66666666666663" y="0.0" width="208.33333333333337" height="30"/>
                                                         <state key="normal" title="Create"/>
                                                         <connections>
-                                                            <segue destination="yVh-Zr-D26" kind="unwind" identifier="didAddExpense" unwindAction="unwindToExpenseView:" id="rli-kw-9Xa"/>
+                                                            <segue destination="yVh-Zr-D26" kind="unwind" identifier="didAddExpense" unwindAction="unwindToExpenseView:" id="lEI-1S-4UZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

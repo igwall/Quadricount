@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ExpenseTableViewController: NSObject, UITableViewDataSource {
+class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetModelDelegate {
     
     var tableView : UITableView!
     var travel : Travel
@@ -20,6 +20,7 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource {
         self.travel = travel
         self.data = ExpenseSet(travel: travel)
         super.init()
+        self.data.subscribe(observer: self)
         self.tableView.dataSource = self
     }
     
@@ -34,5 +35,23 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource {
             cell.expenseAmount.text = exp.amount.description
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.data.delete(expenseAt: indexPath.row)
+        }
+    }
+    
+    func expenseAdded(atIndexPath: IndexPath) {
+        self.tableView.insertRows(at: [atIndexPath], with: UITableView.RowAnimation.middle)
+    }
+    
+    func expenseDeleted(atIndexPath: IndexPath) {
+        self.tableView.deleteRows(at: [atIndexPath], with: UITableView.RowAnimation.middle)
+    }
+    
+    func expenseUpdated(atIndexPath: IndexPath) {
+        self.tableView.selectRow(at: atIndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
 }
