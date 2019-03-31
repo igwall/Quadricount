@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contribution" representedClassName="Contribution" syncable="YES" codeGenerationType="class">
         <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="ptraveller" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="pcontribution" inverseEntity="Traveller" syncable="YES"/>
     </entity>
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pimage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ptravel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="pexpenses" inverseEntity="Travel" syncable="YES"/>
     </entity>
@@ -17,7 +17,7 @@
         <relationship name="ptraveller" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="pperson" inverseEntity="Traveller" syncable="YES"/>
     </entity>
     <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
-        <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pimage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pexpenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="ptravel" inverseEntity="Expense" syncable="YES"/>
         <relationship name="pTraveller" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Traveller" inverseName="ptravel" inverseEntity="Traveller" syncable="YES"/>
@@ -33,7 +33,7 @@
         <element name="Contribution" positionX="256.03125" positionY="35.4375" width="128" height="75"/>
         <element name="Expense" positionX="242.703125" positionY="273.76953125" width="128" height="105"/>
         <element name="Person" positionX="-12.14453125" positionY="-88.11328125" width="128" height="105"/>
-        <element name="Travel" positionX="-164.4140625" positionY="288.8671875" width="128" height="90"/>
-        <element name="Traveller" positionX="-253.47265625" positionY="20.26953125" width="128" height="118"/>
+        <element name="Travel" positionX="-164.4140625" positionY="288.8671875" width="128" height="105"/>
+        <element name="Traveller" positionX="-253.47265625" positionY="20.26953125" width="128" height="120"/>
     </elements>
 </model>

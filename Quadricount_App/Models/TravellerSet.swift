@@ -8,13 +8,22 @@
 
 import Foundation
 
-public class TravellerSet {
+class TravellerSet {
     
     // A traveller is composed by a person, a begin and end date.
-    public var travellers : [Traveller]
+    private var travellers : [Traveller]
+    private var delegate : TravellerSetModelDelegate? = nil
     
-    init(travellers: [Traveller]){
-        self.travellers = travellers
+    init(travel : Travel){
+        if let res = TravellerDAO.fetch(forTravel: travel){
+            if res.count > 0 {
+                self.travellers = res
+            } else {
+                self.travellers = [Traveller]()
+            }
+        } else {
+            self.travellers = [Traveller]()
+        }
     }
     
     public var isEmpty : Bool {
@@ -25,24 +34,47 @@ public class TravellerSet {
         return self.travellers.count
     }
     
+    public func subscribe(observer: TravellerSetModelDelegate){
+        self.delegate = observer
+    }
+
+    
     public func contains(traveller: Traveller) -> Bool{
         return self.travellers.contains(traveller)
+    }
+    
+    public func get(travellerAt: Int) -> Traveller? {
+        guard travellerAt >= 0 && travellerAt < self.count else { return nil }
+        return self.travellers[travellerAt]
     }
     
     public func add(traveller : Traveller){
         if !self.contains(traveller: traveller) {
             self.travellers.append(traveller)
+            if let deleg = self.delegate {
+                if let index = travellers.index(of: traveller){
+                    deleg.travellerAdded(atIndexPath: IndexPath(row: index, section: 0))
+                }
+            }
+            CoreDataManager.save()
         }
     }
     
-    public func remove(traveller: Traveller){
-        if let index = self.travellers.firstIndex(of: traveller){
-            self.travellers.remove(at: index)
+    public func delete(travellerAt: Int){
+        if let travellerToDelete = self.get(travellerAt: travellerAt){
+            travellers.remove(at: travellerAt)
+            CoreDataManager.context.delete(travellerToDelete)
+            if let deleg = self.delegate {
+                deleg.travellerDeleted(atIndexPath: IndexPath(row: travellerAt,section: 0))
+            }
+            CoreDataManager.save()
         }
     }
-    
-    
-    
-    
+}
+
+protocol TravellerSetModelDelegate {
+    func travellerAdded(atIndexPath: IndexPath)
+    func travellerDeleted(atIndexPath: IndexPath)
+    func travellerUpdated(atIndexPath: IndexPath)
 }
 

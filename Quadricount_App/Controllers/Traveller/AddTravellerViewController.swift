@@ -13,6 +13,7 @@ class AddTravellerViewController: UIViewController{
     
     var newTraveller : Traveller?
     var currentTravel : Travel!
+    var travellerSet : TravellerSet!
     
     // DATA FROM VIEW FOR CONTROLLER
     @IBOutlet weak var firstName: UITextField!
@@ -41,7 +42,9 @@ class AddTravellerViewController: UIViewController{
                 } else {
                     self.newTraveller = Traveller(person: tempPerson, beginDate: dateOne, travel: self.currentTravel)
                 }
-                CoreDataManager.save()
+                if let travellerCreated = self.newTraveller {
+                    self.travellerSet.add(traveller: travellerCreated)
+                }
             }
         }
     }

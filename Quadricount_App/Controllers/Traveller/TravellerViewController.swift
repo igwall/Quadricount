@@ -30,6 +30,7 @@ class TravellerViewController : UIViewController {
         if segue.identifier == "addTraveller" {
             if let dest = segue.destination as? AddTravellerViewController {
                 dest.currentTravel = self.travel
+                dest.travellerSet = self.tabViewController.data
             }
         }
     }

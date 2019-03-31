@@ -15,10 +15,21 @@ class AddExpenseViewController : UIViewController {
     var currentTravel : Travel!
     var expenseSet : ExpenseSet!
     
+    var buyersTableViewController : ContributionTableViewController!
+    var attendeesTableViewController : ContributionTableViewController!
+
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var dateField: UITextField!
    
+    @IBOutlet weak var buyersTableView: UITableView!
+    @IBOutlet weak var attendeesTableView: UITableView!
+    
+    override func viewDidLoad() {
+        self.buyersTableViewController = ContributionTableViewController(tableView: self.buyersTableView, travel: self.currentTravel)
+        self.attendeesTableViewController = ContributionTableViewController(tableView: self.attendeesTableView, travel: self.currentTravel)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddExpense" {
             if let name = nameField.text, let date = dateField.text, let amount = Float(amountField.text ?? "0"){
