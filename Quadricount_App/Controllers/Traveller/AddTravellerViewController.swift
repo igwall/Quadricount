@@ -24,9 +24,39 @@ class AddTravellerViewController: UIViewController{
     var listOfPerson : [Person]?
     var personExisting : Person?
     
+    var firstdatePicker = UIDatePicker()
+    var secondDatePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         self.listOfPerson = PersonDAO.fetchAll()
-        self.pickerController = AddTravellerPickerViewController(pickerView: picker)
+        self.pickerController = AddTravellerPickerViewController(pickerView: picker, travel: currentTravel )
+        
+        prepareDatePicker(datePicker: firstdatePicker, textField : firstDate)
+        prepareDatePicker(datePicker: secondDatePicker, textField: secondDate)
+        
+    }
+    
+    func prepareDatePicker(datePicker : UIDatePicker, textField : UITextField){
+        datePicker.datePickerMode = .date
+        textField.inputView = datePicker
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dateChanged) )
+        toolbar.setItems([doneButton], animated: true)
+        textField.inputAccessoryView = toolbar
+    }
+    
+    @objc func dateChanged (){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        if firstDate.isFirstResponder {
+            firstDate.text = formatter.string(from: firstdatePicker.date)
+        }
+        else{
+            secondDate.text = formatter.string(from: secondDatePicker.date)
+        }
+        
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,7 +76,7 @@ class AddTravellerViewController: UIViewController{
             }
             
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "mm-dd-yyyy"
+            dateFormatter.dateFormat = "MM-dd-yyyy"
             
              if firstDate.text != "" {
                 guard let fDate = firstDate.text else {return}

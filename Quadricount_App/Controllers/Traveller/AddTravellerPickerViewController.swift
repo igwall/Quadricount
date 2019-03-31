@@ -15,18 +15,22 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     var picker : UIPickerView
     var personSet : PersonSet!
     var selectedPerson : Person?
+    var travel : Travel!
     
-    init(pickerView: UIPickerView){
+    init(pickerView: UIPickerView, travel: Travel){
         self.picker = pickerView
         super.init()
         self.picker.dataSource = self
         self.picker.delegate = self
+        self.travel = travel
         self.personSet = PersonSet()
         self.personSet.addDelegate(delegate: self)
     }
     
     func viewDidLoad() {
-       
+        // On va récupérer les travellers, extraire la personne et l'enlever du personSet:
+        // L'objectif étant de garder seulement les personnes qui ne sont pas affectées à ce voyage
+    
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,7 +48,6 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedPerson = personSet.getPerson(index: row)
-        print(selectedPerson?.fullname)
     }
     
     func personAdded(at indexPath: IndexPath) {

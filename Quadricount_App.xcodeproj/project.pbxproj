@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				872BBB76224A8656003DD19E /* TravellerViewController.swift */,
-				8743A2AB224A359900971E26 /* AddTravellerViewController.swift */,
 				8743A2AD224A6D2800971E26 /* TravellerTableViewController.swift */,
+				8743A2AB224A359900971E26 /* AddTravellerViewController.swift */,
 				87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */,
 			);
 			path = Traveller;

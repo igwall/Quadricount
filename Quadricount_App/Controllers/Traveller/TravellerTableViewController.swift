@@ -32,12 +32,15 @@ class TravellerTableViewController : NSObject, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "travellerCell", for: indexPath) as! TravellerCell
         if let traveller = self.data.get(travellerAt: indexPath.row){
             cell.fullName.text = traveller.fullname
-            cell.beginDate.text = traveller.beginDate.description
+            cell.beginDate.text = formatter.string(for: traveller.beginDate)
             if traveller.endDate != nil{
-                cell.endDate.text = traveller.endDate!.description
+                cell.endDate.text = formatter.string(for: traveller.endDate!)
             } else {
                 cell.endDate.text = "No date entered"
             }
