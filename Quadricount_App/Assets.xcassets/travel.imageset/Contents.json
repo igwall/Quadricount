@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "launchscreen.png",
+      "filename" : "travel_create_Shadow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "launchscreen-1.png",
+      "filename" : "travel_create_Shadow-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "launchscreen-2.png",
+      "filename" : "travel_create_Shadow-2.png",
       "scale" : "3x"
     }
   ],

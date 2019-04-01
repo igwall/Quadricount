@@ -19,27 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QUv-px-9jG">
-                                <rect key="frame" x="0.0" y="136" width="375" height="168.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QUv-px-9jG" secondAttribute="height" multiplier="1056:475" id="0DA-dn-1wJ"/>
+                                    <constraint firstAttribute="width" constant="375" id="P5y-Hk-6T8"/>
+                                    <constraint firstAttribute="height" constant="667" id="dVm-Qm-PD3"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parait-il que les bons comptes font les bons amis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIW-pa-gik">
-                                <rect key="frame" x="30" y="279.5" width="315" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39063400030136108" green="0.76601296663284302" blue="0.94959896802902222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YIW-pa-gik" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.9" id="ARs-Em-ikr"/>
-                            <constraint firstAttribute="trailing" secondItem="QUv-px-9jG" secondAttribute="trailing" id="CH1-pg-dvc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIW-pa-gik" secondAttribute="trailing" constant="30" id="HeT-Tc-rhc"/>
-                            <constraint firstItem="QUv-px-9jG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.66" id="Pb6-zH-Qxu"/>
-                            <constraint firstItem="QUv-px-9jG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="arT-2d-VRW"/>
-                            <constraint firstItem="YIW-pa-gik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nyU-CW-9Sv"/>
-                            <constraint firstItem="QUv-px-9jG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xRY-k1-gdG"/>
+                            <constraint firstItem="QUv-px-9jG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2uH-vZ-mZ2"/>
+                            <constraint firstItem="QUv-px-9jG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Edd-1x-uaY"/>
+                            <constraint firstItem="QUv-px-9jG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="MQk-wn-jZw"/>
+                            <constraint firstAttribute="bottom" secondItem="QUv-px-9jG" secondAttribute="bottom" id="MUL-dt-MBH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QUv-px-9jG" secondAttribute="trailing" id="bXF-pT-dQm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -50,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="1056" height="475"/>
+        <image name="logo" width="750" height="1334"/>
     </resources>
 </document>
