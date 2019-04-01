@@ -32,8 +32,11 @@ class AddExpenseViewController : UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddExpense" {
+            let buyers = self.buyersTableViewController.selectedContributions()
+            //print(self.attendeesTableViewController.selectedContributions())
             if let name = nameField.text, let date = dateField.text, let amount = Float(amountField.text ?? "0"){
-                self.newExpense = Expense(name: name, amount: amount, travel: currentTravel)
+                self.newExpense = Expense(name: name, amount: amount, travel: currentTravel, buyers: buyers)
+                print(self.newExpense?.buyers)
                 if let expenseCreated = self.newExpense {
                     self.expenseSet.add(expense: expenseCreated)
                 }

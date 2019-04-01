@@ -19,6 +19,7 @@ class ContributionTableViewController: NSObject, UITableViewDataSource, UITableV
         self.tableView = tableView
         self.travel = travel
         self.data = TravellerSet(travel: travel)
+        print(self.data.description)
         super.init()
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -29,13 +30,26 @@ class ContributionTableViewController: NSObject, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "travellerCell") as! UITableViewCell
-        cell.textLabel?.text = self.data.get(travellerAt: indexPath.row)?.fullname
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "travellerCell") as! ContributionCell
+        cell.traveller = self.data.get(travellerAt: indexPath.row)
+        cell.nameLabel?.text = cell.traveller.fullname
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark ? UITableViewCell.AccessoryType.none : UITableViewCell.AccessoryType.checkmark
+    }
+    
+    func selectedContributions() -> ContributionSet {
+        let contributions : ContributionSet = ContributionSet()
+        (self.tableView.visibleCells).forEach({
+            (cell: UITableViewCell) -> Void in do {
+                if let cell = cell as? ContributionCell, cell.accessoryType == UITableViewCell.AccessoryType.checkmark, let amount = cell.amountField.text, let traveller = cell.traveller  {
+                    contributions.add(contribution: Contribution(amount: Float(amount) ?? 0 , traveller: traveller))
+                }
+            }
+        })
+        return contributions
     }
     
 }
