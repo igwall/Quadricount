@@ -46,6 +46,11 @@ class TabBarController : UITabBarController , UITabBarControllerDelegate{
             controller.currentTravel = self.travel
             controller.initializeController()
         }
+        
+        if let controller = viewController as? BalanceViewController {
+            controller.currentTravel = self.travel
+            controller.initialize()
+        }
     }
     
     

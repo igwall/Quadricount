@@ -69,7 +69,7 @@ class TravellerSet {
             }
             CoreDataManager.save()
         }
-    }
+    }    
 }
 
 protocol TravellerSetModelDelegate {

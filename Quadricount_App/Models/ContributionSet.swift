@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ContributionSet {
+class ContributionSet : Sequence {
     
     private var content : [Contribution]
     
@@ -61,5 +61,40 @@ class ContributionSet {
     public var toNSSet : NSSet{
         return NSSet(array: content)
     }
+    
+    public func makeIterator() -> ItContributionSet{
+        return ItContributionSet(set: self)
+    }
 
+}
+
+class ItContributionSet : IteratorProtocol {
+        
+    private var listToIterate : ContributionSet
+    private var index : Int
+    
+    public var current : Contribution? {
+        guard !self.end else { return nil }
+        return self.listToIterate.get(at:self.index)
+    }
+    
+    public var end : Bool {
+        return (index < 0) || (index >= listToIterate.count)
+    }
+    
+    fileprivate init(set : ContributionSet){
+        self.listToIterate = set
+        self.index = 0
+    }
+    
+    public func reset(){
+        self.index = 0
+    }
+    
+    public func next() -> Contribution? {
+        guard !self.end else { return nil }
+        self.index += 1
+        return self.listToIterate.get(at: index - 1)
+    }
+    
 }

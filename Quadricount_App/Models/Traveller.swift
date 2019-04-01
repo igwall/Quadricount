@@ -47,6 +47,11 @@ extension Traveller {
         return p.fullname
     }
     
+    public var firstname : String {
+        guard let p = person else { return "" }
+        return p.firstname
+    }
+    
     public var travel : Travel? {
         get {
             return self.ptravel

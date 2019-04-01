@@ -10,6 +10,11 @@
 		1D2D4520225204E2009AA8C8 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D451F225204E2009AA8C8 /* ContributionCell.swift */; };
 		1D2D45222252075D009AA8C8 /* ContributionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D45212252075D009AA8C8 /* ContributionSet.swift */; };
 		1D2D452422520A21009AA8C8 /* ContributionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452322520A21009AA8C8 /* ContributionDAO.swift */; };
+		1D2D452622523BCB009AA8C8 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452522523BCB009AA8C8 /* Debt.swift */; };
+		1D2D4528225247F8009AA8C8 /* DebtSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D4527225247F8009AA8C8 /* DebtSet.swift */; };
+		1D2D452B22524CCD009AA8C8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */; };
+		1D2D452D22524DF9009AA8C8 /* DebtsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */; };
+		1D2D45302252516D009AA8C8 /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452F2252516D009AA8C8 /* DebtCell.swift */; };
 		1D3F83E2224A76F800C1269F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E1224A76F800C1269F /* Expense.swift */; };
 		1D3F83E4224A791200C1269F /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E3224A791200C1269F /* Contribution.swift */; };
 		1D790970224E401D00B001AF /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D79096F224E401D00B001AF /* TravelViewController.swift */; };
@@ -25,9 +30,9 @@
 		1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */; };
 		1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */; };
 		1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E72249576C00B66C7B /* AddTravelViewController.swift */; };
-		1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806922515D84000E6462 /* TravelPageViewController.swift */; };
 		1DC1806322514D48000E6462 /* TravellerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806222514D48000E6462 /* TravellerDAO.swift */; };
 		1DC1806622515201000E6462 /* ContributionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806522515201000E6462 /* ContributionTableViewController.swift */; };
+		1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806922515D84000E6462 /* TravelPageViewController.swift */; };
 		1DF9EAB022466AB4001FA3E5 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAF22466AB4001FA3E5 /* TravelTableViewController.swift */; };
 		1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */; };
 		1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB92249110F00CBF238 /* PersonDAO.swift */; };
@@ -75,6 +80,11 @@
 		1D2D451F225204E2009AA8C8 /* ContributionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
 		1D2D45212252075D009AA8C8 /* ContributionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionSet.swift; sourceTree = "<group>"; };
 		1D2D452322520A21009AA8C8 /* ContributionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionDAO.swift; sourceTree = "<group>"; };
+		1D2D452522523BCB009AA8C8 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
+		1D2D4527225247F8009AA8C8 /* DebtSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtSet.swift; sourceTree = "<group>"; };
+		1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsTableViewController.swift; sourceTree = "<group>"; };
+		1D2D452F2252516D009AA8C8 /* DebtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
 		1D3F83E1224A76F800C1269F /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		1D3F83E3224A791200C1269F /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		1D79096F224E401D00B001AF /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
@@ -90,9 +100,9 @@
 		1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
 		1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
 		1DB209E72249576C00B66C7B /* AddTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelViewController.swift; sourceTree = "<group>"; };
-		1DC1806922515D84000E6462 /* TravelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPageViewController.swift; sourceTree = "<group>"; };
 		1DC1806222514D48000E6462 /* TravellerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerDAO.swift; sourceTree = "<group>"; };
 		1DC1806522515201000E6462 /* ContributionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionTableViewController.swift; sourceTree = "<group>"; };
+		1DC1806922515D84000E6462 /* TravelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPageViewController.swift; sourceTree = "<group>"; };
 		1DF9EAAF22466AB4001FA3E5 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1DFC9CB92249110F00CBF238 /* PersonDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -150,6 +160,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2D452922524CB5009AA8C8 /* Debts */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */,
+				1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */,
+			);
+			path = Debts;
+			sourceTree = "<group>";
+		};
+		1D2D452E22525150009AA8C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */,
+				8743A2B1224A7EB700971E26 /* TravellerCell.swift */,
+				1D79097F224E823100B001AF /* ExpenseCell.swift */,
+				1D2D451F225204E2009AA8C8 /* ContributionCell.swift */,
+				1D2D452F2252516D009AA8C8 /* DebtCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1D790973224E6D3E00B001AF /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +231,7 @@
 		1DFC9CA522490B9900CBF238 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D2D452922524CB5009AA8C8 /* Debts */,
 				1D790976224E6D6300B001AF /* Person */,
 				1D790975224E6D5E00B001AF /* Expense */,
 				1D790974224E6D4D00B001AF /* Travel */,
@@ -223,6 +255,8 @@
 				1D3F83E3224A791200C1269F /* Contribution.swift */,
 				1D790977224E726500B001AF /* ExpenseSet.swift */,
 				1D2D45212252075D009AA8C8 /* ContributionSet.swift */,
+				1D2D452522523BCB009AA8C8 /* Debt.swift */,
+				1D2D4527225247F8009AA8C8 /* DebtSet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +299,7 @@
 		87FDE2252244F87A00C0B64F /* Quadricount_App */ = {
 			isa = PBXGroup;
 			children = (
+				1D2D452E22525150009AA8C8 /* View */,
 				1DFC9CAF2249100C00CBF238 /* Persist */,
 				1DFC9CA622490BA200CBF238 /* Models */,
 				1DFC9CA522490B9900CBF238 /* Controllers */,
@@ -276,10 +311,6 @@
 				87FDE2352244F87C00C0B64F /* Info.plist */,
 				1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */,
 				87FDE22D2244F87A00C0B64F /* Quadricount_App.xcdatamodeld */,
-				1DAE83E8224A0ABF00C03ED5 /* TravelCell.swift */,
-				8743A2B1224A7EB700971E26 /* TravellerCell.swift */,
-				1D79097F224E823100B001AF /* ExpenseCell.swift */,
-				1D2D451F225204E2009AA8C8 /* ContributionCell.swift */,
 			);
 			path = Quadricount_App;
 			sourceTree = "<group>";
@@ -438,14 +469,17 @@
 				1D3F83E2224A76F800C1269F /* Expense.swift in Sources */,
 				1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */,
 				8743A2AE224A6D2800971E26 /* TravellerTableViewController.swift in Sources */,
+				1D2D45302252516D009AA8C8 /* DebtCell.swift in Sources */,
 				1D790970224E401D00B001AF /* TravelViewController.swift in Sources */,
 				1DFC9CC12249111B00CBF238 /* Person.swift in Sources */,
 				1D790978224E726500B001AF /* ExpenseSet.swift in Sources */,
+				1D2D452D22524DF9009AA8C8 /* DebtsTableViewController.swift in Sources */,
 				1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */,
 				1DC1806322514D48000E6462 /* TravellerDAO.swift in Sources */,
 				1DFC9CBD2249110F00CBF238 /* PersonFetchResultController.swift in Sources */,
 				1D79097E224E7F6B00B001AF /* ExpenseViewController.swift in Sources */,
 				1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */,
+				1D2D452622523BCB009AA8C8 /* Debt.swift in Sources */,
 				1D2D452422520A21009AA8C8 /* ContributionDAO.swift in Sources */,
 				872BBB77224A8656003DD19E /* TravellerViewController.swift in Sources */,
 				1DFC9CC32249116A00CBF238 /* Travel.swift in Sources */,
@@ -460,11 +494,13 @@
 				1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */,
 				1DAE83E9224A0ABF00C03ED5 /* TravelCell.swift in Sources */,
 				1D2D45222252075D009AA8C8 /* ContributionSet.swift in Sources */,
+				1D2D4528225247F8009AA8C8 /* DebtSet.swift in Sources */,
 				8743A2AA224A2BDC00971E26 /* TravellerSet.swift in Sources */,
 				1DF9EAB022466AB4001FA3E5 /* TravelTableViewController.swift in Sources */,
 				1D790972224E43BB00B001AF /* TabBarController.swift in Sources */,
 				1D790980224E823100B001AF /* ExpenseCell.swift in Sources */,
 				8743A2AC224A359900971E26 /* AddTravellerViewController.swift in Sources */,
+				1D2D452B22524CCD009AA8C8 /* BalanceViewController.swift in Sources */,
 				1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */,
 				87697D532249120B005C7FBB /* Traveller.swift in Sources */,
 				1D790984224F926B00B001AF /* GeneralTextFieldDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ExpenseSet {
+class ExpenseSet : Sequence {
     
     private var delegate : ExpenseSetModelDelegate? = nil
     private var content : [Expense]
@@ -59,6 +59,40 @@ class ExpenseSet {
         self.delegate = observer
     }
     
+    public func makeIterator() -> ItExpenseSet{
+        return ItExpenseSet(set: self)
+    }
+    
+}
+
+class ItExpenseSet : IteratorProtocol {
+    
+    private var listToIterate : ExpenseSet
+    private var index : Int
+    
+    public var current : Expense? {
+        guard !self.end else { return nil }
+        return self.listToIterate.get(at:self.index)
+    }
+    
+    public var end : Bool {
+        return (index < 0) || (index >= listToIterate.count)
+    }
+    
+    fileprivate init(set : ExpenseSet){
+        self.listToIterate = set
+        self.index = 0
+    }
+    
+    public func reset(){
+        self.index = 0
+    }
+    
+    public func next() -> Expense? {
+        guard !self.end else { return nil }
+        self.index += 1
+        return self.listToIterate.get(at: index - 1)
+    }
 }
 
 protocol ExpenseSetModelDelegate {
