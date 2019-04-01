@@ -38,10 +38,12 @@ class TravellerFetchResultController : NSObject, NSFetchedResultsControllerDeleg
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.beginUpdates()
     }
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.endUpdates()
         CoreDataManager.save()
     }
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at
         indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {

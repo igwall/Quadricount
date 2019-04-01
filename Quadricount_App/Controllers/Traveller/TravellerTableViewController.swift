@@ -9,20 +9,19 @@
 import Foundation
 import UIKit
 
-class TravellerTableViewController : NSObject, UITableViewDataSource, UITableViewDelegate{
+class TravellerTableViewController : NSObject, UITableViewDataSource, UITableViewDelegate, TravellerSetModelDelegate{
     
     var table: UITableView
-    var fetchResultController : TravellerFetchResultController
-    var data : ViewModelTravellerTable
+    var data : TravellerSet
     var travel : Travel
     
     
     init(tableView: UITableView, travel: Travel){
         self.table = tableView
         self.travel = travel
-        self.fetchResultController = TravellerFetchResultController(view: tableView, travel: self.travel)
-        self.data = ViewModelTravellerTable(data: fetchResultController.travellerFetched)
+        self.data = TravellerSet(travel: travel)
         super.init()
+        self.data.subscribe(observer: self)
         self.table.dataSource = self
         self.table.delegate = self
     }
@@ -52,8 +51,18 @@ class TravellerTableViewController : NSObject, UITableViewDataSource, UITableVie
         return 70
     }
     
-    func add(traveller: Traveller){
-        self.data.add(traveller: traveller)
+    // MARK: TravellerSet Model Delegate functions
+    
+    func travellerAdded(atIndexPath: IndexPath) {
+        self.table.insertRows(at: [atIndexPath], with: UITableView.RowAnimation.middle)
+    }
+    
+    func travellerDeleted(atIndexPath: IndexPath) {
+        self.table.deleteRows(at: [atIndexPath], with: UITableView.RowAnimation.middle)
+    }
+    
+    func travellerUpdated(atIndexPath: IndexPath) {
+        self.table.selectRow(at: atIndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
     
 }

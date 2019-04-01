@@ -79,27 +79,4 @@ extension Traveller {
         return !(t1.person == t2.person)
     }
     
-    
-}
-
-class ViewModelTravellerTable {
-    public var travellerFetched : NSFetchedResultsController<Traveller>
-    
-    public init(data : NSFetchedResultsController<Traveller>){
-        self.travellerFetched = data
-    }
-    
-    public var count : Int {
-        return self.travellerFetched.fetchedObjects?.count ?? 0
-    }
-    
-    public func get(travellerAt: Int) -> Traveller? {
-        return self.travellerFetched.object(at: IndexPath(row: travellerAt, section: 0))
-    }
-    
-    public func add(traveller: Traveller){
-        //TODO On ne vérifie pas qu'un utilisateur existe déjà
-        let indexPath = self.travellerFetched.indexPath(forObject: traveller)
-    }
-    
 }

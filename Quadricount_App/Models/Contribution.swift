@@ -36,6 +36,4 @@ extension Contribution {
         self.amount = amount
         self.traveller = traveller
     }
-    
-    
 }

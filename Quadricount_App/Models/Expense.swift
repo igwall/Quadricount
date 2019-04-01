@@ -21,6 +21,15 @@ extension Expense {
         }
     }
     
+    public var amount : Float {
+        get {
+            return self.pamount
+        }
+        set {
+            self.pamount = newValue
+        }
+    }
+    
     public var picture : UIImage? {
         get {
             guard let data = self.pimage else { return nil }
@@ -31,4 +40,39 @@ extension Expense {
         }
     }
     
+    public var travel : Travel? {
+        get {
+            return self.ptravel
+        }
+        
+        set {
+            self.ptravel = newValue
+        }
+    }
+    
+    var buyers : ContributionSet? {
+        get {
+            return ContributionSet(nsset: self.pbuyers)
+        }
+        
+        set {
+            if let givenBuyers = newValue {
+                self.pbuyers = givenBuyers.toNSSet
+            }
+        }
+    }
+    
+    convenience init(name : String, amount: Float, travel: Travel, picture: UIImage? = nil, buyers: ContributionSet){
+        self.init(context: CoreDataManager.context)
+        self.name = name
+        self.amount = amount
+        self.travel = travel
+        self.buyers = buyers
+        guard picture != nil else { return }
+        self.picture = picture
+    }
+    
+    
 }
+
+

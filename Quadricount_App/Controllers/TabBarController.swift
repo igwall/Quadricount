@@ -40,6 +40,11 @@ class TabBarController : UITabBarController , UITabBarControllerDelegate{
         if let controller = viewController as? TravelPageViewController {
             controller.currentTravel = self.travel
             controller.initialize()
+	}
+
+        if let controller = viewController as? ExpenseViewController {
+            controller.currentTravel = self.travel
+            controller.initializeController()
         }
     }
     
