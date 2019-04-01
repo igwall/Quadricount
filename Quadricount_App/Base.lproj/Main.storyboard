@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajJ-2b-4kP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajJ-2b-4kP">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -779,7 +779,7 @@
         <!--Travel-->
         <scene sceneID="R0Y-Fb-kex">
             <objects>
-                <viewController id="QWd-8P-Gow" sceneMemberID="viewController">
+                <viewController id="QWd-8P-Gow" customClass="TravelPageViewController" customModule="Quadricount_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kmR-do-U4g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -851,6 +851,10 @@
                         <viewLayoutGuide key="safeArea" id="wKn-e1-L1f"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Travel" image="plane" landscapeImage="plane" id="IGF-7a-lta"/>
+                    <connections>
+                        <outlet property="travelImage" destination="yyA-0k-tpL" id="zAo-Kq-pPf"/>
+                        <outlet property="travelName" destination="NAT-aC-PcY" id="568-Wb-gJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nht-Q1-SZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

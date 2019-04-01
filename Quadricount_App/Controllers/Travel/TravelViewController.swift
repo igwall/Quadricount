@@ -37,6 +37,7 @@ class TravelViewController : UIViewController {
             if let dest = segue.destination as? TabBarController {
                 if let travel = selectedTravel {
                     dest.travel = travel
+                    dest.firstCall()
                 }
             }
         }
