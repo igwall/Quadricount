@@ -42,7 +42,6 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        print(personSet.count)
         return personSet.count
     }
     
