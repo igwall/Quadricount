@@ -19,7 +19,6 @@ class ContributionTableViewController: NSObject, UITableViewDataSource, UITableV
         self.tableView = tableView
         self.travel = travel
         self.data = TravellerSet(travel: travel)
-        print(self.data.description)
         super.init()
         self.tableView.dataSource = self
         self.tableView.delegate = self
