@@ -15,6 +15,11 @@ class AddTravellerViewController: UIViewController{
     var currentTravel : Travel!
     var pickerController : AddTravellerPickerViewController!
     var travellerSet : TravellerSet!
+    var listOfPerson : PersonSet! // List of all Person registered in the application
+    var personExisting : Person?
+    
+    
+    
     
     // DATA FROM VIEW FOR CONTROLLER
     @IBOutlet weak var firstName: UITextField!
@@ -22,14 +27,14 @@ class AddTravellerViewController: UIViewController{
     @IBOutlet weak var firstDate: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var secondDate: UITextField!
-    var listOfPerson : [Person]?
-    var personExisting : Person?
-    
     var firstdatePicker = UIDatePicker()
     var secondDatePicker = UIDatePicker()
+   
     
     override func viewDidLoad() {
-        self.listOfPerson = PersonDAO.fetchAll()
+        guard let persons = PersonDAO.fetchAll() else {return}
+        self.listOfPerson = PersonSet(with: persons)
+        self.travellerSet = TravellerSet(travel: currentTravel)
         self.pickerController = AddTravellerPickerViewController(pickerView: picker, travel: currentTravel )
         
         prepareDatePicker(datePicker: firstdatePicker, textField : firstDate)

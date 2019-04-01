@@ -16,14 +16,24 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     var personSet : PersonSet!
     var selectedPerson : Person?
     var travel : Travel!
+    var travellerSet : TravellerSet!
+    var listOfPerson : PersonSet! // List of all Person registered in the application
+    var listOfPersonNotInThisTravel : PersonSet!
     
     init(pickerView: UIPickerView, travel: Travel){
         self.picker = pickerView
         super.init()
         self.picker.dataSource = self
         self.picker.delegate = self
-        self.travel = travel
-        self.personSet = PersonSet()
+        let getallPersons = PersonDAO.fetchAll()
+        guard let allPersons =  getallPersons else {return}
+        self.listOfPerson = PersonSet(with: allPersons)
+        self.travellerSet = TravellerSet(travel: travel)
+        guard let personOfThisTravel = travellerSet.extractPerson() else {return}
+        self.listOfPersonNotInThisTravel = PersonSet(with: allPersons) // Liste de toutes les personnes a qui on va soustraire les personnes de ce voyage
+        self.listOfPersonNotInThisTravel.makeDiff(personSetToSubstract: personOfThisTravel)
+        
+        
         self.personSet.addDelegate(delegate: self)
     }
     
@@ -42,11 +52,12 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return personSet.count
+        guard let person = listOfPersonNotInThisTravel else {return 0}
+        return person.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPerson = personSet.getPerson(index: row)
+        selectedPerson = listOfPersonNotInThisTravel.getPerson(index: row)
     }
     
     func personAdded(at indexPath: IndexPath) {

@@ -26,6 +26,15 @@ class TravellerSet {
         }
     }
     
+    public func extractPerson()-> PersonSet? {
+        let personSet = PersonSet()
+        for traveller in self.travellers {
+            guard let person = traveller.person else {return nil}
+            personSet.add(person: person)
+        }
+        return personSet
+    }
+    
     public var isEmpty : Bool {
         return self.travellers.isEmpty
     }

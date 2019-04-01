@@ -25,9 +25,9 @@
 		1DB209E42249515400B66C7B /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */; };
 		1DB209E62249540C00B66C7B /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */; };
 		1DB209E82249576C00B66C7B /* AddTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB209E72249576C00B66C7B /* AddTravelViewController.swift */; };
-		1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806922515D84000E6462 /* TravelPageViewController.swift */; };
 		1DC1806322514D48000E6462 /* TravellerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806222514D48000E6462 /* TravellerDAO.swift */; };
 		1DC1806622515201000E6462 /* ContributionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806522515201000E6462 /* ContributionTableViewController.swift */; };
+		1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1806922515D84000E6462 /* TravelPageViewController.swift */; };
 		1DF9EAB022466AB4001FA3E5 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAF22466AB4001FA3E5 /* TravelTableViewController.swift */; };
 		1DFC9CBB2249110F00CBF238 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */; };
 		1DFC9CBC2249110F00CBF238 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC9CB92249110F00CBF238 /* PersonDAO.swift */; };
@@ -90,9 +90,9 @@
 		1DB209E32249515400B66C7B /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
 		1DB209E52249540C00B66C7B /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
 		1DB209E72249576C00B66C7B /* AddTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelViewController.swift; sourceTree = "<group>"; };
-		1DC1806922515D84000E6462 /* TravelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPageViewController.swift; sourceTree = "<group>"; };
 		1DC1806222514D48000E6462 /* TravellerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerDAO.swift; sourceTree = "<group>"; };
 		1DC1806522515201000E6462 /* ContributionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionTableViewController.swift; sourceTree = "<group>"; };
+		1DC1806922515D84000E6462 /* TravelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPageViewController.swift; sourceTree = "<group>"; };
 		1DF9EAAF22466AB4001FA3E5 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		1DFC9CB82249110F00CBF238 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1DFC9CB92249110F00CBF238 /* PersonDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -649,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q59L5W9X97;
 				INFOPLIST_FILE = Quadricount_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -666,6 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q59L5W9X97;
 				INFOPLIST_FILE = Quadricount_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
