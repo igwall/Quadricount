@@ -63,6 +63,14 @@ class ExpenseSet : Sequence {
         return ItExpenseSet(set: self)
     }
     
+    var description : String {
+        var r : String = ""
+        for e in content {
+            r += e.description
+        }
+        return r
+    }
+    
 }
 
 class ItExpenseSet : IteratorProtocol {

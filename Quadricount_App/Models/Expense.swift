@@ -62,12 +62,25 @@ extension Expense {
         }
     }
     
-    convenience init(name : String, amount: Float, travel: Travel, picture: UIImage? = nil, buyers: ContributionSet){
+    var attendees : ContributionSet? {
+        get {
+            return ContributionSet(nsset: self.pattendees)
+        }
+        
+        set {
+            if let givenAttendees = newValue {
+                self.pattendees = givenAttendees.toNSSet
+            }
+        }
+    }
+    
+    convenience init(name : String, amount: Float, travel: Travel, buyers: ContributionSet, attendees: ContributionSet,  picture: UIImage? = nil){
         self.init(context: CoreDataManager.context)
         self.name = name
         self.amount = amount
         self.travel = travel
         self.buyers = buyers
+        self.attendees = attendees
         guard picture != nil else { return }
         self.picture = picture
     }

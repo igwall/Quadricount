@@ -1,5 +1,5 @@
 //
-//  DebtsTableViewController.swift
+//  StatesTableViewController.swift
 //  Quadricount_App
 //
 //  Created by Thomas Falcone on 01/04/2019.
@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class DebtsTableViewController : NSObject, UITableViewDataSource {
+class StatesTableViewController : NSObject, UITableViewDataSource{
     
     var tableView : UITableView
     var currentTravel : Travel
-    var data : DebtSet
+    var data : StateSetViewModel
     
     init(tableView : UITableView, travel: Travel){
         self.currentTravel = travel
         self.tableView = tableView
-        self.data = DebtSet(travel: self.currentTravel)
+        self.data = StateSetViewModel(expenses: ExpenseSet(travel: currentTravel))
         super.init()
         self.tableView.dataSource = self
     }
@@ -27,11 +27,10 @@ class DebtsTableViewController : NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "debtCell", for: indexPath) as! DebtCell
-        if let debt = data.get(debtAt: indexPath.row) {
-            cell.giverFirstname.text = debt.giver?.firstname
-            cell.receiverFirstname.text = debt.receiver?.firstname
-            cell.amount.text = debt.amount?.description
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as! StateCell
+        if let state = data.get(at: indexPath.row) {
+            cell.firstname.text = state.0.firstname
+            cell.amount.text = state.1.description
         }
         return cell
     }

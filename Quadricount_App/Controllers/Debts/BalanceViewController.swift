@@ -13,11 +13,13 @@ class BalanceViewController : UIViewController {
     
     @IBOutlet weak var generalStateTableView: UITableView!
     @IBOutlet weak var debtsTableView: UITableView!
+    @IBOutlet weak var statesTableView: UITableView!
     
     
     var currentTravel : Travel!
     var debtsTableController : DebtsTableViewController!
-    
+    var statesTableController : StatesTableViewController!
+
     override func viewDidLoad() {
         
         
@@ -25,6 +27,7 @@ class BalanceViewController : UIViewController {
     
     func initialize(){
         self.debtsTableController = DebtsTableViewController(tableView: self.debtsTableView, travel: currentTravel)
+        self.statesTableController = StatesTableViewController(tableView: self.statesTableView, travel: currentTravel)
     }
     
     

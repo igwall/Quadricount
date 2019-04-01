@@ -65,6 +65,14 @@ class ContributionSet : Sequence {
     public func makeIterator() -> ItContributionSet{
         return ItContributionSet(set: self)
     }
+    
+    var description : String {
+        var res : String = ""
+        for e in self.content {
+            res.append(e.description)
+        }
+        return res
+    }
 
 }
 

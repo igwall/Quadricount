@@ -36,4 +36,8 @@ extension Contribution {
         self.amount = amount
         self.traveller = traveller
     }
+    
+    override public var description: String {
+        return "\(traveller?.firstname) and \(amount.description)"
+    }
 }

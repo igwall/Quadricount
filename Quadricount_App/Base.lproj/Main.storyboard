@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="114" width="414" height="293"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="j96-gm-eAr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" rowHeight="53" id="j96-gm-eAr" customClass="StateCell" customModule="Quadricount_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j96-gm-eAr" id="AMU-XU-nBj">
@@ -169,6 +169,10 @@
                                                 <constraint firstItem="ec3-ws-RqG" firstAttribute="leading" secondItem="AMU-XU-nBj" secondAttribute="leadingMargin" id="wYi-gj-ZMn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amount" destination="JTp-IE-RPg" id="sJS-7S-orD"/>
+                                            <outlet property="firstname" destination="ec3-ws-RqG" id="G3g-gd-Bhf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -266,6 +270,7 @@
                     <connections>
                         <outlet property="debtsTableView" destination="qYn-2H-TSe" id="Sct-Vk-eJr"/>
                         <outlet property="generalStateTableView" destination="QHD-im-xVE" id="URw-H9-jUV"/>
+                        <outlet property="statesTableView" destination="QHD-im-xVE" id="6mp-Le-hIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw7-q3-vcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -783,6 +788,7 @@
                                                                     </constraints>
                                                                 </tableViewCellContentView>
                                                                 <connections>
+                                                                    <outlet property="amountField" destination="KD3-dT-cRf" id="3wk-pq-2xs"/>
                                                                     <outlet property="nameLabel" destination="eEM-nF-xcg" id="pEA-X2-1tF"/>
                                                                 </connections>
                                                             </tableViewCell>

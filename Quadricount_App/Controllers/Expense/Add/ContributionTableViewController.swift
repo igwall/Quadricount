@@ -41,13 +41,11 @@ class ContributionTableViewController: NSObject, UITableViewDataSource, UITableV
     
     func selectedContributions() -> ContributionSet {
         let contributions : ContributionSet = ContributionSet()
-        (self.tableView.visibleCells).forEach({
-            (cell: UITableViewCell) -> Void in do {
-                if let cell = cell as? ContributionCell, cell.accessoryType == UITableViewCell.AccessoryType.checkmark, let amount = cell.amountField.text, let traveller = cell.traveller  {
-                    contributions.add(contribution: Contribution(amount: Float(amount) ?? 0 , traveller: traveller))
-                }
+        for visibleCell in self.tableView.visibleCells {
+            if let cell = visibleCell as? ContributionCell, cell.accessoryType == UITableViewCell.AccessoryType.checkmark, let amount = cell.amountField.text, let traveller = cell.traveller  {
+                contributions.add(contribution: Contribution(amount: Float(amount) ?? 0 , traveller: traveller))
             }
-        })
+        }
         return contributions
     }
     

@@ -19,7 +19,9 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetMod
         self.tableView = tableView
         self.travel = travel
         self.data = ExpenseSet(travel: travel)
+        
         super.init()
+        
         self.data.subscribe(observer: self)
         self.tableView.dataSource = self
     }

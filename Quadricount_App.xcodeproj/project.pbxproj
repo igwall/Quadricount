@@ -15,6 +15,9 @@
 		1D2D452B22524CCD009AA8C8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */; };
 		1D2D452D22524DF9009AA8C8 /* DebtsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */; };
 		1D2D45302252516D009AA8C8 /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D452F2252516D009AA8C8 /* DebtCell.swift */; };
+		1D3069A522526CFC007685B3 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3069A422526CFC007685B3 /* State.swift */; };
+		1D3069A722527077007685B3 /* StatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3069A622527077007685B3 /* StatesTableViewController.swift */; };
+		1D3069A922527807007685B3 /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3069A822527807007685B3 /* StateCell.swift */; };
 		1D3F83E2224A76F800C1269F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E1224A76F800C1269F /* Expense.swift */; };
 		1D3F83E4224A791200C1269F /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F83E3224A791200C1269F /* Contribution.swift */; };
 		1D790970224E401D00B001AF /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D79096F224E401D00B001AF /* TravelViewController.swift */; };
@@ -85,6 +88,9 @@
 		1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsTableViewController.swift; sourceTree = "<group>"; };
 		1D2D452F2252516D009AA8C8 /* DebtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
+		1D3069A422526CFC007685B3 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		1D3069A622527077007685B3 /* StatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewController.swift; sourceTree = "<group>"; };
+		1D3069A822527807007685B3 /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
 		1D3F83E1224A76F800C1269F /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		1D3F83E3224A791200C1269F /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		1D79096F224E401D00B001AF /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 			children = (
 				1D2D452A22524CCD009AA8C8 /* BalanceViewController.swift */,
 				1D2D452C22524DF9009AA8C8 /* DebtsTableViewController.swift */,
+				1D3069A622527077007685B3 /* StatesTableViewController.swift */,
 			);
 			path = Debts;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				1D79097F224E823100B001AF /* ExpenseCell.swift */,
 				1D2D451F225204E2009AA8C8 /* ContributionCell.swift */,
 				1D2D452F2252516D009AA8C8 /* DebtCell.swift */,
+				1D3069A822527807007685B3 /* StateCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				1D2D45212252075D009AA8C8 /* ContributionSet.swift */,
 				1D2D452522523BCB009AA8C8 /* Debt.swift */,
 				1D2D4527225247F8009AA8C8 /* DebtSet.swift */,
+				1D3069A422526CFC007685B3 /* State.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -488,11 +497,14 @@
 				8743A2B2224A7EB700971E26 /* TravellerCell.swift in Sources */,
 				1D3F83E4224A791200C1269F /* Contribution.swift in Sources */,
 				87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */,
+				1D3069A722527077007685B3 /* StatesTableViewController.swift in Sources */,
+				1D3069A522526CFC007685B3 /* State.swift in Sources */,
 				87FDE22F2244F87A00C0B64F /* Quadricount_App.xcdatamodeld in Sources */,
 				1DC1806622515201000E6462 /* ContributionTableViewController.swift in Sources */,
 				1DFC9CC02249111B00CBF238 /* PersonSet.swift in Sources */,
 				1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */,
 				1DAE83E9224A0ABF00C03ED5 /* TravelCell.swift in Sources */,
+				1D3069A922527807007685B3 /* StateCell.swift in Sources */,
 				1D2D45222252075D009AA8C8 /* ContributionSet.swift in Sources */,
 				1D2D4528225247F8009AA8C8 /* DebtSet.swift in Sources */,
 				8743A2AA224A2BDC00971E26 /* TravellerSet.swift in Sources */,
