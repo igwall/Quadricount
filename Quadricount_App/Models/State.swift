@@ -31,7 +31,6 @@ class StateSet {
             
             if let attendees = expense.attendees {
                 for attendee in attendees {
-                    print(attendee)
                     if let traveller = attendee.traveller {
                         self.decrement(by: attendee.amount, forTraveller: traveller)
                     }
@@ -83,6 +82,7 @@ class StateSetViewModel : StateSetObserver{
     init(expenses : ExpenseSet){
         self.data = StateSet(expenses: expenses)
         self.content = data.getContentAsArray()
+        self.sort()
     }
     
     func get(at: Int) -> (Traveller, Float)? {
@@ -94,6 +94,11 @@ class StateSetViewModel : StateSetObserver{
         self.content = data.getContentAsArray()
     }
     
+    func sort(){
+        self.content.sort(by: { (x: (Traveller,Float), y: (Traveller,Float)) -> Bool in
+            return x.1 > y.1
+        })
+    }
     
     
 }

@@ -31,6 +31,15 @@ class StatesTableViewController : NSObject, UITableViewDataSource{
         if let state = data.get(at: indexPath.row) {
             cell.firstname.text = state.0.firstname
             cell.amount.text = state.1.description
+            if state.1 > 0 {
+                cell.amount.textColor = UIColor(red: 0, green: 150, blue: 0, alpha: 1)
+                cell.firstname.textColor = UIColor(red: 0, green: 150, blue: 0, alpha: 1)
+            } else if state.1 < 0 {
+                cell.amount.textColor = UIColor(red: 150, green: 0, blue: 0, alpha: 1)
+                cell.firstname.textColor = UIColor(red: 150, green: 0, blue: 0, alpha: 1)
+            } else {
+                //On fait quelque chose si c'est à 0 ?
+            }
         }
         return cell
     }

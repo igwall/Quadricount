@@ -21,6 +21,8 @@ class TabBarController : UITabBarController , UITabBarControllerDelegate{
         if let controller = self.selectedViewController {
             self.tabBarController(self, didSelect: controller)
         }
+        
+        self.title = travel.name
     }
     
     // We have to use this function because viewDidLoad is called before the TravelViewController fills the travel variable.
