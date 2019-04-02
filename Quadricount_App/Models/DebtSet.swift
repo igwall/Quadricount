@@ -17,7 +17,7 @@ class DebtSet {
     }
     
     init(travel : Travel){
-        self.content = generateDebts(expenses : ExpenseSet(travel: travel))
+        generateDebts(expenses : ExpenseSet(travel: travel))
     }
     
     public func get(debtAt: Int) -> Debt? {
@@ -27,18 +27,36 @@ class DebtSet {
     
     // MARK : Debts generation algorithm
     
-    private func generateDebts(expenses: ExpenseSet) -> [Debt] {
+    private func generateDebts(expenses: ExpenseSet){
         
-        /*if let trav = expenses.get(at: 0)?.buyers?.get(at: 1)?.traveller, let trav2 = expenses.get(at: 0)?.buyers?.get(at: 0)?.traveller {
-            return [Debt(giver: trav, amount: 10, receiver: trav2)]
-        } else {
-            print("Ton test est vide wesh")
-            return [Debt]()
-        }*/
+        let data = StateSetViewModel(expenses: expenses)
         
+        /*
+         Starting two iterators from the biggest and the smallest state.
+         We are trying to fill the biggest state with the smallest.
+         Three scenari -> BS + SS > 0 -> SS.next() and we create a debt : SStrav -> -SSamount -> BStrav
+                       -> BS + SS < 0 -> BS.next() and we create a debt : SStrav -> BSamount -> BStrav
+                       -> BS + SS = 0 -> BS.next() and SS.next() and we create a debt : SStrav -> -SSamount -> BStrav or SStrav -> BSamount -> BStrav
+        */
         
+        var biggest = 0
+        var smallest = data.count - 1
         
-        return [Debt]()
+        while biggest < smallest {
+            if let biggestState = data.get(at: biggest), let smallestState = data.get(at: smallest){
+                if ( biggestState.1 + smallestState.1 > 0 ){
+                    self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    smallest -= 1
+                } else if ( biggestState.1 + smallestState.1 < 0){
+                    self.content.append(Debt(giver: smallestState.0, amount: biggestState.1, receiver: biggestState.0))
+                    biggest += 1
+                } else {
+                    self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    smallest -= 1
+                    biggest += 1
+                }
+            }
+        }
     }
     
     
