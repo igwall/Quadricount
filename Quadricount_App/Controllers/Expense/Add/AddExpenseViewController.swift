@@ -56,7 +56,7 @@ class AddExpenseViewController : UIViewController {
         textField.inputAccessoryView = toolbar
     }
     
-    @objc func dateChanged (){
+    @objc func dateChanged(){
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
             self.dateField.text = formatter.string(from: datePicker.date)
