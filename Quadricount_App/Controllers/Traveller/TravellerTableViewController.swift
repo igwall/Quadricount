@@ -41,7 +41,7 @@ class TravellerTableViewController : NSObject, UITableViewDataSource, UITableVie
             if traveller.endDate != nil{
                 cell.endDate.text = formatter.string(for: traveller.endDate!)
             } else {
-                cell.endDate.text = "No date entered"
+                cell.endDate.text = "No data"
             }
         }
         return cell

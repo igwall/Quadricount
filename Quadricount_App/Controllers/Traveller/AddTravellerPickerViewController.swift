@@ -25,6 +25,7 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
         self.travel = travel
         self.personSet = PersonSet()
         self.personSet.addDelegate(delegate: self)
+        self.pickerView(self.picker, didSelectRow: 0, inComponent: 0)
     }
     
     func viewDidLoad() {
