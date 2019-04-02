@@ -60,6 +60,21 @@ class TravellerSet {
         }
     }
     
+    public func extractPersons() -> PersonSet?{
+        print(self.isEmpty)
+        guard  !self.isEmpty else {return nil}
+        var tabOfPerson = [Person]()
+        for traveller in self.travellers{
+            guard let personToExtract = traveller.person else {
+                return nil
+            }
+            tabOfPerson.append(personToExtract)
+        }
+        print(tabOfPerson.count)
+        return PersonSet(with:tabOfPerson)
+    }
+    
+    
     public func delete(travellerAt: Int){
         if let travellerToDelete = self.get(travellerAt: travellerAt){
             travellers.remove(at: travellerAt)

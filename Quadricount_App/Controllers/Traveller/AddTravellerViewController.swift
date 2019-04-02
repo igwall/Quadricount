@@ -30,7 +30,7 @@ class AddTravellerViewController: UIViewController{
     
     override func viewDidLoad() {
         self.listOfPerson = PersonDAO.fetchAll()
-        self.pickerController = AddTravellerPickerViewController(pickerView: picker, travel: currentTravel )
+        self.pickerController = AddTravellerPickerViewController(pickerView: picker, travel: currentTravel, travellerSet: self.travellerSet )
         
         prepareDatePicker(datePicker: firstdatePicker, textField : firstDate)
         prepareDatePicker(datePicker: secondDatePicker, textField: secondDate)
@@ -60,41 +60,106 @@ class AddTravellerViewController: UIViewController{
         view.endEditing(true)
     }
     
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "didAddTraveller" {
+            return controlPersonInput() && dateControlled()
+        } else {
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddTraveller" {
-            var newPerson : Person
-            personExisting = pickerController.selectedPerson
-            // Si on a un nom et un prenom
-            if let fname = firstName.text, !fname.isEmpty {
-                if let lname = lastName.text, !lname.isEmpty {
-                    newPerson = Person(fn: fname, ln: lname)
-                } else{
-                    fatalError("Vous n'avez pas mis de nom")
+            var travellerToAdd : Traveller
+            let personToAdd =  createPersonFromInput()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM-dd-yyyy"
+            if let fDate = self.firstDate.text {
+                guard let dateOne = formatter.date(from: fDate) else {return}
+                if let sDate = self.secondDate.text{
+                    guard let dateTwo = formatter.date(from: sDate) else {return}
+                    travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
+                    self.travellerSet.add(traveller: travellerToAdd)
+                }else{
+                    travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, travel: self.currentTravel)
+                    self.travellerSet.add(traveller: travellerToAdd)
                 }
             } else {
-                guard let res = personExisting else{ return }
-                newPerson = res
-            }
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM-dd-yyyy"
-            
-             if firstDate.text != "" {
-                guard let fDate = firstDate.text else {return}
-                let dateOne = dateFormatter.date(from: fDate)!
-                if secondDate.text != "" {
-                    guard let sDate = secondDate.text else {return}
-                    let dateTwo = dateFormatter.date(from: sDate)!
-                    self.newTraveller = Traveller(person: newPerson, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
-                } else {
-                    self.newTraveller = Traveller(person: newPerson, beginDate: dateOne, travel: self.currentTravel)
-                }
-                if let travellerCreated = self.newTraveller {
-                    self.travellerSet.add(traveller: travellerCreated)
-                }
+                return
             }
         }
     }
+    
+    func dateControlled() -> Bool{
+        var correct : Bool
+        if let fDate = self.firstDate.text {
+            correct = true
+        } else {
+            correct = false
+            let alert = UIAlertController(title: "Date error", message: "You have to add one date or more", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        return correct
+    }
+    
+    func controlPersonInput() -> Bool {
+        var correct : Bool
+        personExisting = pickerController.selectedPerson
+        // Si on a un nom et un prenom
+        
+        if let fname = firstName.text, !fname.isEmpty {
+            if let lname = lastName.text, !lname.isEmpty {
+                let allPerson = PersonSet()
+                if allPerson.contains(firstName: fname, lastName: lname){
+                    let alert = UIAlertController(title: "Person existing", message: "This person already exist, please add it with the carousel below. Don't forget to erase value in fields", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    correct = false
+                }
+                else { correct = true }
+            }else{
+                let alert = UIAlertController(title: "Lastname missing", message: "Please enter a lastname", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                correct = false
+            }
+        } else {
+            let alert = UIAlertController(title: "Firstname missing", message: "Please enter informations about firstname", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            correct = false
+            correct = false
+        }
+        return correct
+    }
+    
+    func createPersonFromInput() -> Person {
+        var personToAdd : Person
+        personExisting = pickerController.selectedPerson
+        // Si on a un nom et un prenom
+        
+        if let fname = firstName.text, !fname.isEmpty {
+            if let lname = lastName.text, !lname.isEmpty {
+                    personToAdd = Person(fn: fname, ln: lname)
+                }
+                else {
+                    fatalError()
+                }
+            } else {
+            if let res = personExisting {
+                personToAdd = res
+            } else{
+                fatalError()
+            }
+            
+        }
+        return personToAdd
+    }
+    
+    
+    
 }
 
 

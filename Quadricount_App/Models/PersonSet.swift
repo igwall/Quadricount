@@ -62,6 +62,67 @@ public class PersonSet {
     public func contains(person: Person) -> Bool{
         return self.content.contains(person)
     }
+    
+    public func contains(firstName: String, lastName: String) -> Bool{
+        var contain = false
+        for person in self.content{
+            if person.firstname == firstName && person.lastname == lastName{
+                contain = true
+            }
+        }
+        return contain
+    }
+    
+    public func makeIterator() -> ItPersonSet{
+        return ItPersonSet(set: self)
+    }
+    
+    public func makeDifference(personSetToSubstract : PersonSet) -> PersonSet? {
+        var resultOfSubstraction = [Person]()
+        if !personSetToSubstract.isEmpty{
+            let iterator = self.makeIterator()
+            while !iterator.end{
+                guard let person = iterator.next() else {return nil}
+                if !personSetToSubstract.contains(person: person) {
+                    resultOfSubstraction.append(person)
+                }
+            }
+            return PersonSet(with: resultOfSubstraction)
+        } else {
+            return self
+        }
+    }
+}
+
+public class ItPersonSet {
+    
+    private var listToIterate : PersonSet
+    private var index : Int
+    
+    public var current : Person? {
+        guard !self.end else { return nil }
+        return self.listToIterate.content[self.index]
+    }
+    
+    public var end : Bool {
+        return (index < 0) || (index >= listToIterate.count)
+    }
+    
+    fileprivate init(set : PersonSet){
+        self.listToIterate = set
+        self.index = 0
+    }
+    
+    public func reset(){
+        self.index = 0
+    }
+    
+    public func next() -> Person? {
+        guard !self.end else { return nil }
+        self.index += 1
+        return self.listToIterate.content[index - 1]
+    }
+    
 }
 
 public protocol PersonSetModelDelegate {

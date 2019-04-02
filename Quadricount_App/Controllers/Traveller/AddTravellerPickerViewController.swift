@@ -13,25 +13,35 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
 
     // var listOfFullname :[String]
     var picker : UIPickerView
-    var personSet : PersonSet!
+    var allPerson : PersonSet!
     var selectedPerson : Person?
     var travel : Travel!
+    var travellerSet : TravellerSet?
+    var personNotInTravel : PersonSet!
     
-    init(pickerView: UIPickerView, travel: Travel){
+    init(pickerView: UIPickerView, travel: Travel, travellerSet: TravellerSet){
         self.picker = pickerView
+        self.travellerSet = travellerSet
         super.init()
-        self.picker.dataSource = self
-        self.picker.delegate = self
         self.travel = travel
-        self.personSet = PersonSet()
-        self.personSet.addDelegate(delegate: self)
-        self.pickerView(self.picker, didSelectRow: 0, inComponent: 0)
-    }
-    
-    func viewDidLoad() {
+        self.allPerson = PersonSet()
+        self.allPerson.addDelegate(delegate: self)
         // On va récupérer les travellers, extraire la personne et l'enlever du personSet:
         // L'objectif étant de garder seulement les personnes qui ne sont pas affectées à ce voyage
-    
+        if let groupOfPerson = self.travellerSet {
+            if let personInTravel = groupOfPerson.extractPersons(){
+                print(personInTravel)
+                self.personNotInTravel = allPerson.makeDifference(personSetToSubstract: personInTravel)
+            } else {
+                print("coucou")
+                self.personNotInTravel = self.allPerson
+            }
+        } else {
+             self.personNotInTravel = self.allPerson
+        }
+        self.picker.dataSource = self
+        self.picker.delegate = self
+        self.pickerView(self.picker, didSelectRow: 0, inComponent: 0)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -39,15 +49,15 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return personSet.getPerson(index: row)?.fullname
+             return personNotInTravel.getPerson(index: row)?.fullname
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return personSet.count
+        return personNotInTravel.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPerson = personSet.getPerson(index: row)
+        selectedPerson = personNotInTravel.getPerson(index: row)
     }
     
     func personAdded(at indexPath: IndexPath) {
