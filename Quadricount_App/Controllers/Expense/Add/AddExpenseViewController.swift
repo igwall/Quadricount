@@ -18,6 +18,8 @@ class AddExpenseViewController : UIViewController {
     var buyersTableViewController : ContributionTableViewController!
     var attendeesTableViewController : ContributionTableViewController!
 
+    var datePicker = UIDatePicker()
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var dateField: UITextField!
@@ -28,6 +30,7 @@ class AddExpenseViewController : UIViewController {
     override func viewDidLoad() {
         self.buyersTableViewController = ContributionTableViewController(tableView: self.buyersTableView, travel: self.currentTravel)
         self.attendeesTableViewController = ContributionTableViewController(tableView: self.attendeesTableView, travel: self.currentTravel)
+         prepareDatePicker(datePicker: datePicker, textField : dateField)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,4 +45,23 @@ class AddExpenseViewController : UIViewController {
             }
         }
     }
+    
+    func prepareDatePicker(datePicker : UIDatePicker, textField : UITextField){
+        datePicker.datePickerMode = .date
+        textField.inputView = datePicker
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dateChanged) )
+        toolbar.setItems([doneButton], animated: true)
+        textField.inputAccessoryView = toolbar
+    }
+    
+    @objc func dateChanged (){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+            self.dateField.text = formatter.string(from: datePicker.date)
+        view.endEditing(true)
+    }
+    
+    
 }
