@@ -33,6 +33,15 @@ class AddExpenseViewController : UIViewController {
          prepareDatePicker(datePicker: datePicker, textField : dateField)
     }
     
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "didAddExpense" {
+            return controlDate()
+        } else {
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didAddExpense" {
             let buyers = self.buyersTableViewController.selectedContributions()
@@ -64,6 +73,19 @@ class AddExpenseViewController : UIViewController {
         formatter.dateFormat = "MM-dd-yyyy"
             self.dateField.text = formatter.string(from: datePicker.date)
         view.endEditing(true)
+    }
+    
+    func controlDate()-> Bool {
+        var correct : Bool
+        if let fDate = self.dateField.text, !fDate.isEmpty {
+            correct = true
+        } else {
+            correct = false
+            let alert = UIAlertController(title: "Date error", message: "You have to add a date for the expense", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        return correct
     }
     
     
