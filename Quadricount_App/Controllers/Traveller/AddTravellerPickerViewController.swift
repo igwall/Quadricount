@@ -53,7 +53,10 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return personNotInTravel.count
     }
-    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let string = self.pickerView(pickerView, titleForRow: row, forComponent: component)
+        return NSAttributedString(string: string ?? "", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+    }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedPerson = personNotInTravel.getPerson(index: row)
     }
