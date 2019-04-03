@@ -21,7 +21,7 @@ class DebtSet {
     }
     
     init(travel : Travel){
-        generateDebts(expenses : ExpenseSet(travel: travel))
+        generateDebts(expenses : travel.expenses)
     }
     
     public func get(debtAt: Int) -> Debt? {

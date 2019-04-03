@@ -18,7 +18,7 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetMod
     init(tableView: UITableView, travel: Travel){
         self.tableView = tableView
         self.travel = travel
-        self.data = ExpenseSet(travel: travel)
+        self.data = travel.expenses
         
         super.init()
         

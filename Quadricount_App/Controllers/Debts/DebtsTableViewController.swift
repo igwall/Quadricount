@@ -18,7 +18,7 @@ class DebtsTableViewController : NSObject, UITableViewDataSource {
     init(tableView : UITableView, travel: Travel){
         self.currentTravel = travel
         self.tableView = tableView
-        self.data = DebtSet(travel: self.currentTravel)
+        self.data = currentTravel.debts
         super.init()
         self.tableView.dataSource = self
     }

@@ -18,7 +18,7 @@ class StatesTableViewController : NSObject, UITableViewDataSource{
     init(tableView : UITableView, travel: Travel){
         self.currentTravel = travel
         self.tableView = tableView
-        self.data = StateSetViewModel(expenses: ExpenseSet(travel: currentTravel))
+        self.data = StateSetViewModel(expenses: currentTravel.expenses)
         super.init()
         self.tableView.dataSource = self
     }

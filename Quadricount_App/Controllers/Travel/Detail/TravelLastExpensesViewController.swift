@@ -18,7 +18,7 @@ class TravelLastExpensesViewController :  NSObject, UITableViewDataSource {
     init(table : UITableView, travel: Travel){
         self.table = table
         self.currentTravel = travel
-        self.expenses = ExpenseSet(travel: travel)
+        self.expenses = travel.expenses
         super.init()
         self.table.dataSource = self
     }
