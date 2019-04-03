@@ -30,10 +30,8 @@ class AddTravellerPickerViewController : NSObject, UIPickerViewDataSource, Perso
         // L'objectif étant de garder seulement les personnes qui ne sont pas affectées à ce voyage
         if let groupOfPerson = self.travellerSet {
             if let personInTravel = groupOfPerson.extractPersons(){
-                print(personInTravel)
                 self.personNotInTravel = allPerson.makeDifference(personSetToSubstract: personInTravel)
             } else {
-                print("coucou")
                 self.personNotInTravel = self.allPerson
             }
         } else {

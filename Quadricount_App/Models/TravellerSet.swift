@@ -61,7 +61,6 @@ class TravellerSet {
     }
     
     public func extractPersons() -> PersonSet?{
-        print(self.isEmpty)
         guard  !self.isEmpty else {return nil}
         var tabOfPerson = [Person]()
         for traveller in self.travellers{
@@ -70,7 +69,6 @@ class TravellerSet {
             }
             tabOfPerson.append(personToExtract)
         }
-        print(tabOfPerson.count)
         return PersonSet(with:tabOfPerson)
     }
     
