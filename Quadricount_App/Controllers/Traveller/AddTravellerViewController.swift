@@ -126,11 +126,7 @@ class AddTravellerViewController: UIViewController{
                 correct = false
             }
         } else {
-            let alert = UIAlertController(title: "Firstname missing", message: "Please enter informations about firstname", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            correct = false
-            correct = false
+            correct = true
         }
         return correct
     }
