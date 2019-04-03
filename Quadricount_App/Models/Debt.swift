@@ -8,40 +8,15 @@
 
 import Foundation
 
-extension Debt {
+class Debt {
 
-    public var amount : Float? {
-        get {
-            return self.pamount
-        }
-        
-        set {
-            self.pamount = newValue ?? 0
-        }
-    }
+    public var amount : Float?
     
-    public var giver : Traveller? {
-        get {
-            return self.pgiver
-        }
-        
-        set {
-            self.pgiver = newValue
-        }
-    }
+    public var giver : Traveller?
     
-    public var receiver : Traveller? {
-        get {
-            return self.preceiver
-        }
-        
-        set {
-            self.preceiver = newValue
-        }
-    }
+    public var receiver : Traveller?
     
-    convenience init(giver: Traveller, amount: Float, receiver: Traveller) {
-        self.init(context: CoreDataManager.context)
+    init(giver: Traveller, amount: Float, receiver: Traveller) {
         self.giver = giver
         self.amount = amount
         self.receiver = receiver
