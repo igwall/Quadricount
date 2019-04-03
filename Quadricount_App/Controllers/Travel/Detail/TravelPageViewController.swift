@@ -24,7 +24,9 @@ class TravelPageViewController : UIViewController {
     //We have to use this function cause viewDidLoad is launched BEFORE the TabBarController fills the currentTravel variable
     func initialize(){
         travelName.text = currentTravel.name
-        travelImage.image = currentTravel.picture
+        if let picture = currentTravel.picture {
+             travelImage.image = picture
+        }
         balancedLabel.text = currentTravel.balanced ? "Balanced" : "Not Balanced"
         self.expensesTableController = TravelLastExpensesViewController(table: self.lastExpensesTable, travel: self.currentTravel)
         self.stateTableController = TravelStateResumeViewController(table: resumeTable, travel: self.currentTravel)
