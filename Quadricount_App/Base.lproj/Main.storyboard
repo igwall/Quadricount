@@ -578,44 +578,52 @@
                                 <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="expenseCell" id="HY6-Ak-7jz" customClass="ExpenseCell" customModule="Quadricount_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="expenseCell" rowHeight="74" id="HY6-Ak-7jz" customClass="ExpenseCell" customModule="Quadricount_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HY6-Ak-7jz" id="ZDB-zn-KB0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-Zb-47P">
-                                                    <rect key="frame" x="20" y="11.333333333333336" width="106" height="21"/>
+                                                    <rect key="frame" x="20.000000000000007" y="11" width="105.66666666666669" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-Yu-A6E">
-                                                    <rect key="frame" x="376" y="11.333333333333336" width="11" height="21"/>
+                                                    <rect key="frame" x="376" y="26.333333333333329" width="11" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVq-MP-8pq">
-                                                    <rect key="frame" x="308" y="11.333333333333336" width="58" height="21"/>
+                                                    <rect key="frame" x="311" y="26.333333333333329" width="58" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAK-RC-a2Y">
+                                                    <rect key="frame" x="20" y="40" width="30.666666666666671" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="GVt-Yu-A6E" firstAttribute="centerY" secondItem="oVq-MP-8pq" secondAttribute="centerY" id="FiU-rM-532"/>
-                                                <constraint firstItem="oVq-MP-8pq" firstAttribute="centerY" secondItem="Atq-Zb-47P" secondAttribute="centerY" id="HQW-ea-jZ2"/>
-                                                <constraint firstItem="GVt-Yu-A6E" firstAttribute="leading" secondItem="oVq-MP-8pq" secondAttribute="trailing" constant="10" id="Iyg-MS-PHa"/>
-                                                <constraint firstItem="Atq-Zb-47P" firstAttribute="centerY" secondItem="ZDB-zn-KB0" secondAttribute="centerY" id="bvj-yk-0z4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GVt-Yu-A6E" secondAttribute="trailing" constant="7" id="jVb-cf-JFf"/>
-                                                <constraint firstItem="Atq-Zb-47P" firstAttribute="leading" secondItem="ZDB-zn-KB0" secondAttribute="leadingMargin" id="kNi-cC-x1y"/>
-                                                <constraint firstItem="oVq-MP-8pq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Atq-Zb-47P" secondAttribute="trailing" constant="8" symbolic="YES" id="wRH-sI-mlg"/>
+                                                <constraint firstItem="Atq-Zb-47P" firstAttribute="top" secondItem="ZDB-zn-KB0" secondAttribute="topMargin" id="AWo-G1-J0t"/>
+                                                <constraint firstItem="NAK-RC-a2Y" firstAttribute="top" secondItem="Atq-Zb-47P" secondAttribute="bottom" constant="8" id="LQB-sL-YFX"/>
+                                                <constraint firstItem="NAK-RC-a2Y" firstAttribute="leading" secondItem="ZDB-zn-KB0" secondAttribute="leadingMargin" id="Lt1-UX-xVl"/>
+                                                <constraint firstItem="GVt-Yu-A6E" firstAttribute="leading" secondItem="oVq-MP-8pq" secondAttribute="trailing" constant="7" id="XOd-QV-fEa"/>
+                                                <constraint firstItem="Atq-Zb-47P" firstAttribute="leading" secondItem="ZDB-zn-KB0" secondAttribute="leadingMargin" id="lFv-VT-dKH"/>
+                                                <constraint firstItem="oVq-MP-8pq" firstAttribute="centerY" secondItem="ZDB-zn-KB0" secondAttribute="centerY" id="pBD-vo-0IW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GVt-Yu-A6E" secondAttribute="trailing" constant="7" id="qsK-Pw-R8A"/>
+                                                <constraint firstItem="GVt-Yu-A6E" firstAttribute="centerY" secondItem="ZDB-zn-KB0" secondAttribute="centerY" id="rJq-eI-0Hq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="NAK-RC-a2Y" id="goy-Ph-WLt"/>
                                             <outlet property="expenseAmount" destination="oVq-MP-8pq" id="vR8-61-whJ"/>
                                             <outlet property="expenseTitle" destination="Atq-Zb-47P" id="rX0-e0-zrU"/>
                                         </connections>

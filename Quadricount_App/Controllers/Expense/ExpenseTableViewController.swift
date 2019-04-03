@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetModelDelegate {
+class ExpenseTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate, ExpenseSetModelDelegate {
     
     var tableView : UITableView!
     var travel : Travel
@@ -24,6 +24,7 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetMod
         
         self.data.subscribe(observer: self)
         self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +36,12 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetMod
         if let exp = data.get(at: indexPath.row) {
             cell.expenseTitle.text = exp.name
             cell.expenseAmount.text = exp.amount.description
+            
+            if  let date = exp.date {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MM-dd-yyyy"
+                cell.dateLabel.text = formatter.string(from: date)
+            }
         }
         return cell
     }
@@ -44,6 +51,14 @@ class ExpenseTableViewController: NSObject, UITableViewDataSource, ExpenseSetMod
             self.data.delete(expenseAt: indexPath.row)
         }
     }
+    
+    // MARK : UITableViewDelegate functions
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    // MARK : Expense Set Model View Delegate functions
     
     func expenseAdded(atIndexPath: IndexPath) {
         self.tableView.insertRows(at: [atIndexPath], with: UITableView.RowAnimation.middle)
