@@ -30,33 +30,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="101.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-bJ-hw8">
-                                                    <rect key="frame" x="30" y="14" width="77" height="77"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paris" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-bJ-hw8">
+                                                    <rect key="frame" x="20" y="14" width="77" height="77"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="77" id="Lin-S9-3lS"/>
                                                         <constraint firstAttribute="height" constant="77" id="OdE-5T-lvy"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nom du voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OV-IP-lSm">
-                                                    <rect key="frame" x="138" y="37" width="224" height="28"/>
+                                                    <rect key="frame" x="107" y="37" width="209" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanced" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-Ad-uqo">
+                                                    <rect key="frame" x="326" y="28" width="50" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="top-2A-ZId"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="2nD-Ad-uqo" firstAttribute="centerY" secondItem="z3n-9i-WHf" secondAttribute="centerY" id="170-Ox-0kt"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3OV-IP-lSm" secondAttribute="bottom" constant="26" id="FIc-pD-ZSX"/>
+                                                <constraint firstItem="2nD-Ad-uqo" firstAttribute="leading" secondItem="3OV-IP-lSm" secondAttribute="trailing" constant="10" id="I1H-40-u2e"/>
                                                 <constraint firstItem="3OV-IP-lSm" firstAttribute="top" secondItem="z3n-9i-WHf" secondAttribute="topMargin" constant="26" id="ap8-Ew-uBj"/>
-                                                <constraint firstItem="yhU-bJ-hw8" firstAttribute="leading" secondItem="z3n-9i-WHf" secondAttribute="leadingMargin" constant="10" id="ch7-ny-xi7"/>
+                                                <constraint firstItem="yhU-bJ-hw8" firstAttribute="leading" secondItem="z3n-9i-WHf" secondAttribute="leadingMargin" id="ch7-ny-xi7"/>
                                                 <constraint firstItem="yhU-bJ-hw8" firstAttribute="bottom" secondItem="z3n-9i-WHf" secondAttribute="bottomMargin" id="gbS-05-S5H"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3OV-IP-lSm" secondAttribute="trailing" constant="6" id="n7W-0j-L1M"/>
-                                                <constraint firstItem="3OV-IP-lSm" firstAttribute="leading" secondItem="yhU-bJ-hw8" secondAttribute="trailing" constant="31" id="q2p-PS-EH8"/>
+                                                <constraint firstAttribute="trailing" secondItem="2nD-Ad-uqo" secondAttribute="trailing" id="lNB-Ge-yCW"/>
+                                                <constraint firstItem="3OV-IP-lSm" firstAttribute="leading" secondItem="yhU-bJ-hw8" secondAttribute="trailing" constant="10" id="q2p-PS-EH8"/>
                                                 <constraint firstItem="yhU-bJ-hw8" firstAttribute="top" secondItem="z3n-9i-WHf" secondAttribute="topMargin" constant="3" id="wne-Gf-FGr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="balancedImage" destination="2nD-Ad-uqo" id="TYa-H7-0Sx"/>
                                             <outlet property="travelImage" destination="yhU-bJ-hw8" id="apq-pj-Me1"/>
                                             <outlet property="travelName" destination="3OV-IP-lSm" id="vz8-9w-Xrb"/>
                                         </connections>
@@ -983,7 +992,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-0k-tpL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paris" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-0k-tpL">
                                 <rect key="frame" x="295" y="79" width="104" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="Kkf-EW-DXn"/>
@@ -1316,8 +1325,10 @@
     <resources>
         <image name="addTraveller" width="100" height="100"/>
         <image name="balance" width="30" height="30"/>
+        <image name="balanced" width="75" height="46"/>
         <image name="card" width="30" height="30"/>
         <image name="expenses" width="100" height="100"/>
+        <image name="paris" width="543" height="543"/>
         <image name="people" width="30" height="30"/>
         <image name="plane" width="30" height="30"/>
         <image name="travel" width="100" height="100"/>

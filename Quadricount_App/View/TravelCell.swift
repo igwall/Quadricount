@@ -11,6 +11,7 @@ import UIKit
 
 class TravelCell : UITableViewCell {
     
+    @IBOutlet weak var balancedImage: UIImageView!
     @IBOutlet weak var travelName: UILabel!
     @IBOutlet weak var travelImage: UIImageView!
     
