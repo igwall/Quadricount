@@ -20,6 +20,25 @@ extension Travel {
             self.pname = newValue
         }
     }
+    
+    var expenses : ExpenseSet{
+        get {
+            return ExpenseSet(travel: self)
+        }
+    }
+    
+    var debts : DebtSet {
+        get {
+            return DebtSet(travel: self)
+        }
+    }
+    
+    var balanced : Bool {
+        get {
+            return self.debts.count == 0
+        }
+    }
+    
     var picture : UIImage? {
         get {
             guard let image = self.pimage else { return nil }
