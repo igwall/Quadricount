@@ -15,13 +15,15 @@ class DebtsTableViewController : NSObject, UITableViewDataSource {
     var currentTravel : Travel
     var data : DebtSet
     
-    init(tableView : UITableView, travel: Travel){
+    init(tableView : UITableView, travel: Travel, delegate: UITableViewDelegate){
         self.currentTravel = travel
         self.tableView = tableView
         self.data = currentTravel.debts
         super.init()
         self.tableView.dataSource = self
+        self.tableView.delegate = delegate
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data.count
     }
@@ -29,6 +31,7 @@ class DebtsTableViewController : NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "debtCell", for: indexPath) as! DebtCell
         if let debt = data.get(debtAt: indexPath.row) {
+            cell.debt = debt
             cell.giverFirstname.text = debt.giver?.firstname
             cell.receiverFirstname.text = debt.receiver?.firstname
             cell.amount.text = debt.amount?.description

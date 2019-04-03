@@ -11,6 +11,8 @@ import UIKit
 
 class DebtCell : UITableViewCell {
     
+    var debt : Debt?
+    
     @IBOutlet weak var giverFirstname: UILabel!
     @IBOutlet weak var receiverFirstname: UILabel!
     @IBOutlet weak var amount: UILabel!
