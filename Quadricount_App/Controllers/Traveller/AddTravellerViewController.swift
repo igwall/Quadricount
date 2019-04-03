@@ -102,7 +102,7 @@ class AddTravellerViewController: UIViewController{
     
     func dateControlled() -> Bool{
         var correct : Bool
-        if let fDate = self.firstDate.text {
+        if let fDate = self.firstDate.text, !fDate.isEmpty {
             correct = true
         } else {
             correct = false
