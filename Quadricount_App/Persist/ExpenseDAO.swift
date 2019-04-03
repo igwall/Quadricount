@@ -28,6 +28,7 @@ class ExpenseDAO {
     
     static func fetch(forTravel : Travel) -> [Expense]?{
         self.request.predicate = NSPredicate(format: "ptravel.pname == %@", forTravel.name)
+        self.request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Expense.pdate), ascending: false)]
         do{
             return try CoreDataManager.context.fetch(self.request)
         } catch {

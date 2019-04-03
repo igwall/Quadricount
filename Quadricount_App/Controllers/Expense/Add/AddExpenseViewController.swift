@@ -38,7 +38,10 @@ class AddExpenseViewController : UIViewController {
             let buyers = self.buyersTableViewController.selectedContributions()
             let attendees = self.attendeesTableViewController.selectedContributions()
             if let name = nameField.text, let date = dateField.text, let amount = Float(amountField.text ?? "0"){
-                self.newExpense = Expense(name: name, amount: amount, travel: currentTravel, buyers: buyers, attendees: attendees)
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MM-dd-yyyy"
+                 guard let dateOne = formatter.date(from: date) else {return}
+                self.newExpense = Expense(name: name, amount: amount, travel: currentTravel, buyers: buyers, attendees: attendees, date: dateOne)
                 if let expenseCreated = self.newExpense {
                     self.expenseSet.add(expense: expenseCreated)
                 }

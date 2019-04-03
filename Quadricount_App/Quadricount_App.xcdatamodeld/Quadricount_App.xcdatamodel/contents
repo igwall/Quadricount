@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contribution" representedClassName="Contribution" syncable="YES" codeGenerationType="class">
         <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="pexpenseasattendees" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="pattendees" inverseEntity="Expense" syncable="YES"/>
@@ -13,6 +13,7 @@
     </entity>
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pimage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pattendees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contribution" inverseName="pexpenseasattendees" inverseEntity="Contribution" syncable="YES"/>
@@ -43,7 +44,7 @@
     <elements>
         <element name="Contribution" positionX="-23.45703125" positionY="-54.02734375" width="128" height="103"/>
         <element name="Debt" positionX="-265.5234375" positionY="-156.328125" width="128" height="88"/>
-        <element name="Expense" positionX="-30.19140625" positionY="157.54296875" width="128" height="133"/>
+        <element name="Expense" positionX="-30.19140625" positionY="157.54296875" width="128" height="150"/>
         <element name="Person" positionX="-528.51171875" positionY="8.2578125" width="128" height="105"/>
         <element name="Travel" positionX="-277.60546875" positionY="189.43359375" width="128" height="105"/>
         <element name="Traveller" positionX="-269.0859375" positionY="1.53125" width="128" height="148"/>

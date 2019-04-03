@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ExpenseCell : UITableViewCell {
+class ExpenseCell : UITableViewCell{
     
     @IBOutlet weak var expenseTitle: UILabel!
     @IBOutlet weak var expenseAmount: UILabel!

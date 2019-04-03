@@ -40,6 +40,16 @@ extension Expense {
         }
     }
     
+    public var date : Date? {
+        get {
+            return self.pdate
+        }
+        
+        set {
+            self.pdate = newValue
+        }
+    }
+    
     public var travel : Travel? {
         get {
             return self.ptravel
@@ -74,15 +84,17 @@ extension Expense {
         }
     }
     
-    convenience init(name : String, amount: Float, travel: Travel, buyers: ContributionSet, attendees: ContributionSet,  picture: UIImage? = nil){
+    convenience init(name : String, amount: Float, travel: Travel, buyers: ContributionSet, attendees: ContributionSet, date: Date ,picture: UIImage? = nil){
         self.init(context: CoreDataManager.context)
         self.name = name
         self.amount = amount
         self.travel = travel
         self.buyers = buyers
         self.attendees = attendees
+        self.date = date
         guard picture != nil else { return }
         self.picture = picture
+        
     }
     
     
