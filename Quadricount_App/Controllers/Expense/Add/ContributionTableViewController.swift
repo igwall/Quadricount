@@ -36,7 +36,17 @@ class ContributionTableViewController: NSObject, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark ? UITableViewCell.AccessoryType.none : UITableViewCell.AccessoryType.checkmark
+        if let cell = tableView.cellForRow(at: indexPath) as? ContributionCell {
+            if cell.accessoryType == UITableViewCell.AccessoryType.checkmark {
+                cell.accessoryType = UITableViewCell.AccessoryType.none
+                cell.amountField.isHidden = true
+                cell.euroLabel.isHidden = true
+            } else {
+                cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+                cell.amountField.isHidden = false
+                cell.euroLabel.isHidden = false
+            }
+        }
     }
     
     func selectedContributions() -> ContributionSet {

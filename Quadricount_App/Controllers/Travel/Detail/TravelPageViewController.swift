@@ -14,6 +14,7 @@ class TravelPageViewController : UIViewController {
     var currentTravel : Travel!
     var expensesTableController : TravelLastExpensesViewController!
     
+    @IBOutlet weak var balancedLabel: UILabel!
     @IBOutlet weak var travelName: UILabel!
     @IBOutlet weak var travelImage: UIImageView!
     @IBOutlet weak var lastExpensesTable: UITableView!
@@ -23,6 +24,7 @@ class TravelPageViewController : UIViewController {
     func initialize(){
         travelName.text = currentTravel.name
         travelImage.image = currentTravel.picture
+        balancedLabel.text = currentTravel.balanced ? "Balanced" : "Not Balanced"
         self.expensesTableController = TravelLastExpensesViewController(table: self.lastExpensesTable, travel: self.currentTravel)
     }
 }

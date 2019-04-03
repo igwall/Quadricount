@@ -75,7 +75,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My travels" id="hD6-BV-HVz">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="jDQ-MK-RTi"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="awt-aH-9T3">
                             <connections>
                                 <segue destination="5me-pv-f8A" kind="showDetail" id="HdK-wH-FRa"/>
@@ -795,6 +794,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <outlet property="amountField" destination="fNe-8r-FH5" id="nMT-vn-KbK"/>
+                                                                    <outlet property="euroLabel" destination="weH-Mq-8zx" id="tuU-RX-iai"/>
                                                                     <outlet property="nameLabel" destination="3Ke-I0-IHH" id="JXq-MH-BqS"/>
                                                                 </connections>
                                                             </tableViewCell>
@@ -864,6 +864,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <outlet property="amountField" destination="KD3-dT-cRf" id="3wk-pq-2xs"/>
+                                                                    <outlet property="euroLabel" destination="byH-tY-Cfx" id="oWu-DO-DC0"/>
                                                                     <outlet property="nameLabel" destination="eEM-nF-xcg" id="pEA-X2-1tF"/>
                                                                 </connections>
                                                             </tableViewCell>
@@ -1079,6 +1080,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Travel" image="plane" landscapeImage="plane" id="IGF-7a-lta"/>
                     <connections>
+                        <outlet property="balancedLabel" destination="Bsm-GE-Z0a" id="EC1-6D-4kj"/>
                         <outlet property="lastExpensesTable" destination="jQh-ot-LPV" id="600-oo-dbW"/>
                         <outlet property="resumeTable" destination="qsD-7h-DEj" id="LQ2-5j-CaV"/>
                         <outlet property="travelImage" destination="yyA-0k-tpL" id="zAo-Kq-pPf"/>
@@ -1099,10 +1101,10 @@
                         <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QWd-8P-Gow" kind="relationship" relationship="viewControllers" id="crj-Cy-v4a"/>
-                        <segue destination="7GF-Vv-0s4" kind="relationship" relationship="viewControllers" id="CgP-FE-fph"/>
-                        <segue destination="khR-Hv-nL3" kind="relationship" relationship="viewControllers" id="n2v-YI-K5r"/>
-                        <segue destination="Or4-YZ-TiA" kind="relationship" relationship="viewControllers" id="q6Q-Ja-Zll"/>
+                        <segue destination="QWd-8P-Gow" kind="relationship" relationship="viewControllers" id="9D5-ms-49w"/>
+                        <segue destination="7GF-Vv-0s4" kind="relationship" relationship="viewControllers" id="A5g-3n-bQj"/>
+                        <segue destination="Or4-YZ-TiA" kind="relationship" relationship="viewControllers" id="XZk-3n-UeO"/>
+                        <segue destination="khR-Hv-nL3" kind="relationship" relationship="viewControllers" id="0r8-4G-1Hh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPJ-qQ-4Gr" userLabel="First Responder" sceneMemberID="firstResponder"/>

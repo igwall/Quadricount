@@ -50,13 +50,19 @@ class DebtSet {
         while biggest < smallest {
             if let biggestState = data.get(at: biggest), let smallestState = data.get(at: smallest){
                 if ( biggestState.1 + smallestState.1 > 0 ){
-                    self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    if smallestState.1 != 0{
+                        self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    }
                     smallest -= 1
                 } else if ( biggestState.1 + smallestState.1 < 0){
-                    self.content.append(Debt(giver: smallestState.0, amount: biggestState.1, receiver: biggestState.0))
+                    if biggestState.1 != 0{
+                        self.content.append(Debt(giver: smallestState.0, amount: biggestState.1, receiver: biggestState.0))
+                    }
                     biggest += 1
                 } else {
-                    self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    if smallestState.1 != 0{
+                        self.content.append(Debt(giver: smallestState.0, amount: -smallestState.1, receiver: biggestState.0))
+                    }
                     smallest -= 1
                     biggest += 1
                 }

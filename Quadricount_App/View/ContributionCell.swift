@@ -13,6 +13,7 @@ class ContributionCell : UITableViewCell {
     
     var traveller : Traveller!
     
+    @IBOutlet weak var euroLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var amountField: UITextField!
 }
