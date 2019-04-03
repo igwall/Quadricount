@@ -16,6 +16,10 @@ class DebtSet {
         return self.content.count
     }
     
+    var balanced : Bool {
+        return self.content.isEmpty
+    }
+    
     init(travel : Travel){
         generateDebts(expenses : ExpenseSet(travel: travel))
     }
@@ -24,6 +28,7 @@ class DebtSet {
         guard debtAt >= 0 && debtAt < self.count else { return nil }
         return self.content[debtAt]
     }
+
     
     // MARK : Debts generation algorithm
     
