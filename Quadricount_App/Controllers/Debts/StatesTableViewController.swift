@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StatesTableViewController : NSObject, UITableViewDataSource{
+class StatesTableViewController : NSObject, UITableViewDataSource {
     
     var tableView : UITableView
     var currentTravel : Travel
@@ -22,6 +22,7 @@ class StatesTableViewController : NSObject, UITableViewDataSource{
         super.init()
         self.tableView.dataSource = self
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data.count
     }
@@ -46,6 +47,8 @@ class StatesTableViewController : NSObject, UITableViewDataSource{
         return cell
     }
     
-    
+    func refreshStates(){
+        self.data = StateSetViewModel(expenses: currentTravel.expenses)
+    }
     
 }
