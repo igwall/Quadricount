@@ -6,11 +6,6 @@
         <relationship name="pexpenseasbuyers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="pbuyers" inverseEntity="Expense" syncable="YES"/>
         <relationship name="ptraveller" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="pcontribution" inverseEntity="Traveller" syncable="YES"/>
     </entity>
-    <entity name="Debt" representedClassName="Debt" syncable="YES" codeGenerationType="class">
-        <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="pgiver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="pgiver" inverseEntity="Traveller" syncable="YES"/>
-        <relationship name="preceiver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traveller" inverseName="preceiver" inverseEntity="Traveller" syncable="YES"/>
-    </entity>
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="pamount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pimage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -35,17 +30,14 @@
         <attribute name="pbeginDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pendDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="pcontribution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contribution" inverseName="ptraveller" inverseEntity="Contribution" syncable="YES"/>
-        <relationship name="pgiver" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Debt" inverseName="pgiver" inverseEntity="Debt" syncable="YES"/>
         <relationship name="pperson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="ptraveller" inverseEntity="Person" syncable="YES"/>
-        <relationship name="preceiver" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Debt" inverseName="preceiver" inverseEntity="Debt" syncable="YES"/>
         <relationship name="ptravel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="pTraveller" inverseEntity="Travel" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contribution" positionX="-23.45703125" positionY="-54.02734375" width="128" height="103"/>
-        <element name="Debt" positionX="-265.5234375" positionY="-156.328125" width="128" height="88"/>
         <element name="Expense" positionX="-30.19140625" positionY="157.54296875" width="128" height="133"/>
         <element name="Person" positionX="-528.51171875" positionY="8.2578125" width="128" height="105"/>
         <element name="Travel" positionX="-277.60546875" positionY="189.43359375" width="128" height="105"/>
-        <element name="Traveller" positionX="-269.0859375" positionY="1.53125" width="128" height="148"/>
+        <element name="Traveller" positionX="-269.0859375" positionY="1.53125" width="128" height="120"/>
     </elements>
 </model>
