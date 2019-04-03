@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eQr-S3-fxO">
-                                <rect key="frame" x="0.0" y="111" width="414" height="576"/>
+                                <rect key="frame" x="0.0" y="111" width="414" height="437"/>
                                 <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -342,27 +342,39 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-No-w30">
-                                <rect key="frame" x="218" y="70" width="166" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title=" + Add a new traveller">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-bp-Cma">
+                                <rect key="frame" x="148" y="640" width="119" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add new traveller">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KV4-96-jhh" kind="showDetail" identifier="addTraveller" id="KvE-cj-bTE"/>
+                                    <segue destination="KV4-96-jhh" kind="showDetail" identifier="addTraveller" id="ou4-MA-nmY"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addTraveller" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-rs-wQo">
+                                <rect key="frame" x="105" y="512" width="204" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="RFX-G3-SGZ"/>
+                                    <constraint firstAttribute="height" constant="126" id="Z21-cR-lIU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="f7N-bp-Cma" firstAttribute="leading" secondItem="dqQ-oA-Zmc" secondAttribute="leading" constant="148" id="0th-Zj-ZKe"/>
+                            <constraint firstItem="dqQ-oA-Zmc" firstAttribute="trailing" secondItem="f7N-bp-Cma" secondAttribute="trailing" constant="147" id="ABo-WO-geL"/>
+                            <constraint firstItem="dCf-rs-wQo" firstAttribute="leading" secondItem="dqQ-oA-Zmc" secondAttribute="leading" constant="105" id="Hhz-ci-bmk"/>
+                            <constraint firstItem="dqQ-oA-Zmc" firstAttribute="bottom" secondItem="f7N-bp-Cma" secondAttribute="bottom" constant="17" id="SsZ-2W-9i0"/>
+                            <constraint firstItem="f7N-bp-Cma" firstAttribute="top" secondItem="dCf-rs-wQo" secondAttribute="bottom" constant="2" id="Uso-ph-DTt"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="leading" secondItem="dqQ-oA-Zmc" secondAttribute="leading" id="eVx-zr-uZQ"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="trailing" secondItem="dqQ-oA-Zmc" secondAttribute="trailing" id="hY9-DT-lH7"/>
-                            <constraint firstItem="dqQ-oA-Zmc" firstAttribute="trailing" secondItem="wX0-No-w30" secondAttribute="trailing" constant="30" id="hYQ-Ki-tNo"/>
-                            <constraint firstItem="eQr-S3-fxO" firstAttribute="bottom" secondItem="dqQ-oA-Zmc" secondAttribute="bottom" id="nJA-fj-eXV"/>
-                            <constraint firstItem="wX0-No-w30" firstAttribute="top" secondItem="dqQ-oA-Zmc" secondAttribute="top" constant="6" id="s8W-UU-FG9"/>
+                            <constraint firstItem="f7N-bp-Cma" firstAttribute="top" secondItem="eQr-S3-fxO" secondAttribute="bottom" constant="92" id="jpN-Yx-chR"/>
                             <constraint firstItem="eQr-S3-fxO" firstAttribute="top" secondItem="dqQ-oA-Zmc" secondAttribute="top" constant="47" id="sHN-dw-sbi"/>
-                            <constraint firstItem="wX0-No-w30" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dqQ-oA-Zmc" secondAttribute="leading" symbolic="YES" id="xnd-Vl-l4r"/>
+                            <constraint firstItem="dqQ-oA-Zmc" firstAttribute="trailing" secondItem="dCf-rs-wQo" secondAttribute="trailing" constant="105" id="t4X-Nx-cZd"/>
+                            <constraint firstItem="f7N-bp-Cma" firstAttribute="top" secondItem="dCf-rs-wQo" secondAttribute="bottom" constant="2" id="xOT-lh-mJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dqQ-oA-Zmc"/>
                     </view>
@@ -1302,6 +1314,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addTraveller" width="100" height="100"/>
         <image name="balance" width="30" height="30"/>
         <image name="card" width="30" height="30"/>
         <image name="expenses" width="100" height="100"/>
