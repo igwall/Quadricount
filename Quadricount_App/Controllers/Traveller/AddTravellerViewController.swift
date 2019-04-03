@@ -78,18 +78,27 @@ class AddTravellerViewController: UIViewController{
             if let fDate = self.firstDate.text {
                 guard let dateOne = formatter.date(from: fDate) else {return}
                 if let sDate = self.secondDate.text{
-                    guard let dateTwo = formatter.date(from: sDate) else {return}
-                    travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
-                    self.travellerSet.add(traveller: travellerToAdd)
+                    if let dateTwo = formatter.date(from: sDate) {
+                        travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, endDate: dateTwo, travel: self.currentTravel)
+                        self.travellerSet.add(traveller: travellerToAdd)
+                        print("correctly added")
+                    } else { // only have one date
+                        travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, travel: self.currentTravel)
+                        self.travellerSet.add(traveller: travellerToAdd)
+                        print("correctly added")
+                    }
                 }else{
-                    travellerToAdd = Traveller(person: personToAdd, beginDate: dateOne, travel: self.currentTravel)
-                    self.travellerSet.add(traveller: travellerToAdd)
+                    return
                 }
-            } else {
-                return
-            }
+            } else {print ("error")}
         }
     }
+    
+    
+    
+    
+    
+    
     
     func dateControlled() -> Bool{
         var correct : Bool
