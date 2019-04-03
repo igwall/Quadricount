@@ -53,6 +53,7 @@
 		87697D532249120B005C7FBB /* Traveller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87697D522249120B005C7FBB /* Traveller.swift */; };
 		87F572DC224E7300002A1E99 /* AddTravellerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */; };
 		87FBBDB32254F94900C6CAA6 /* TravelLastExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FBBDB22254F94900C6CAA6 /* TravelLastExpensesViewController.swift */; };
+		87FBBDB522551DDD00C6CAA6 /* TravelStateResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FBBDB422551DDD00C6CAA6 /* TravelStateResumeViewController.swift */; };
 		87FDE2272244F87A00C0B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2262244F87A00C0B64F /* AppDelegate.swift */; };
 		87FDE2292244F87A00C0B64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FDE2282244F87A00C0B64F /* ViewController.swift */; };
 		87FDE22C2244F87A00C0B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FDE22A2244F87A00C0B64F /* Main.storyboard */; };
@@ -127,6 +128,7 @@
 		87697D522249120B005C7FBB /* Traveller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveller.swift; sourceTree = "<group>"; };
 		87F572DB224E72FF002A1E99 /* AddTravellerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravellerPickerViewController.swift; sourceTree = "<group>"; };
 		87FBBDB22254F94900C6CAA6 /* TravelLastExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLastExpensesViewController.swift; sourceTree = "<group>"; };
+		87FBBDB422551DDD00C6CAA6 /* TravelStateResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelStateResumeViewController.swift; sourceTree = "<group>"; };
 		87FDE2232244F87A00C0B64F /* Quadricount_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadricount_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FDE2262244F87A00C0B64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87FDE2282244F87A00C0B64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			children = (
 				1DC1806922515D84000E6462 /* TravelPageViewController.swift */,
 				87FBBDB22254F94900C6CAA6 /* TravelLastExpensesViewController.swift */,
+				87FBBDB422551DDD00C6CAA6 /* TravelStateResumeViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				1DC1806A22515D84000E6462 /* TravelPageViewController.swift in Sources */,
 				1DAE83E9224A0ABF00C03ED5 /* TravelCell.swift in Sources */,
 				1D3069A922527807007685B3 /* StateCell.swift in Sources */,
+				87FBBDB522551DDD00C6CAA6 /* TravelStateResumeViewController.swift in Sources */,
 				1D2D45222252075D009AA8C8 /* ContributionSet.swift in Sources */,
 				1D2D4528225247F8009AA8C8 /* DebtSet.swift in Sources */,
 				8743A2AA224A2BDC00971E26 /* TravellerSet.swift in Sources */,

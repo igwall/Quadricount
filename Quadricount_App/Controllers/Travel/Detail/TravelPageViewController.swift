@@ -13,6 +13,7 @@ class TravelPageViewController : UIViewController {
     
     var currentTravel : Travel!
     var expensesTableController : TravelLastExpensesViewController!
+    var stateTableController : TravelStateResumeViewController!
     
     @IBOutlet weak var balancedLabel: UILabel!
     @IBOutlet weak var travelName: UILabel!
@@ -26,5 +27,6 @@ class TravelPageViewController : UIViewController {
         travelImage.image = currentTravel.picture
         balancedLabel.text = currentTravel.balanced ? "Balanced" : "Not Balanced"
         self.expensesTableController = TravelLastExpensesViewController(table: self.lastExpensesTable, travel: self.currentTravel)
+        self.stateTableController = TravelStateResumeViewController(table: resumeTable, travel: self.currentTravel)
     }
 }

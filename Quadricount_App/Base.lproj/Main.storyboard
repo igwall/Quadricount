@@ -979,8 +979,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dernières dépenses : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jns-nG-ABP">
-                                <rect key="frame" x="15" y="204" width="166.66666666666666" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="204" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1041,10 +1041,56 @@
                                 <rect key="frame" x="0.0" y="521" width="414" height="166"/>
                                 <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" id="dzo-TH-sOz" customClass="StateCell" customModule="Quadricount_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzo-TH-sOz" id="JTg-cD-adg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwZ-Rs-s7F">
+                                                    <rect key="frame" x="20.000000000000004" y="11" width="57.333333333333343" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td1-xM-epL">
+                                                    <rect key="frame" x="323" y="11" width="58" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xI-1e-MEt">
+                                                    <rect key="frame" x="389" y="11.000000000000002" width="10.666666666666686" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EwZ-Rs-s7F" firstAttribute="bottom" secondItem="JTg-cD-adg" secondAttribute="bottomMargin" id="0wg-dW-eY5"/>
+                                                <constraint firstAttribute="bottom" secondItem="5xI-1e-MEt" secondAttribute="bottom" constant="11" id="1wW-vN-3E5"/>
+                                                <constraint firstItem="5xI-1e-MEt" firstAttribute="top" secondItem="JTg-cD-adg" secondAttribute="top" constant="11" id="9GF-GI-3Jf"/>
+                                                <constraint firstAttribute="trailing" secondItem="5xI-1e-MEt" secondAttribute="trailing" constant="14.33" id="9V0-2J-u34"/>
+                                                <constraint firstItem="EwZ-Rs-s7F" firstAttribute="leading" secondItem="JTg-cD-adg" secondAttribute="leadingMargin" id="9id-tM-wH8"/>
+                                                <constraint firstItem="td1-xM-epL" firstAttribute="top" secondItem="JTg-cD-adg" secondAttribute="topMargin" id="H3B-YV-OmI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="td1-xM-epL" secondAttribute="bottom" id="eXn-Gd-JLp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="td1-xM-epL" secondAttribute="trailing" constant="13" id="tXZ-2r-BhS"/>
+                                                <constraint firstItem="EwZ-Rs-s7F" firstAttribute="top" secondItem="JTg-cD-adg" secondAttribute="topMargin" id="wzi-Uc-9fA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.39063400030000001" green="0.76601296659999996" blue="0.94959896799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="amount" destination="td1-xM-epL" id="cpN-Cn-Gy7"/>
+                                            <outlet property="firstname" destination="EwZ-Rs-s7F" id="N3R-Ct-8rF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Résumé : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg0-Nl-GG3">
-                                <rect key="frame" x="15" y="495" width="75.666666666666671" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="495" width="79.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
