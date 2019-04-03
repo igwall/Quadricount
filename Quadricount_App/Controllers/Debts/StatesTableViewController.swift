@@ -45,6 +45,10 @@ class StatesTableViewController : NSObject, UITableViewDataSource {
             }
         }
         return cell
-    }    
+    }
+    
+    func refreshStates(){
+        self.data = StateSetViewModel(expenses: currentTravel.expenses)
+    }
     
 }

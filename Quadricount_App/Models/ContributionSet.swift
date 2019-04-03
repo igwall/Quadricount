@@ -41,7 +41,6 @@ class ContributionSet : Sequence {
     }
     
     public func add(contribution : Contribution){
-        print("j'ai add")
         content.append(contribution)
         CoreDataManager.save()
     }

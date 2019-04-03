@@ -28,6 +28,10 @@ class DebtsTableViewController : NSObject, UITableViewDataSource {
         return self.data.count
     }
     
+    func refreshDebts(){
+        self.data = currentTravel.debts
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "debtCell", for: indexPath) as! DebtCell
         if let debt = data.get(debtAt: indexPath.row) {

@@ -45,6 +45,9 @@ class BalanceViewController : UIViewController, UITableViewDelegate {
                     
                     self.currentTravel.expenses.add(expense: expense)
                     
+                    self.debtsTableController.refreshDebts()
+                    self.statesTableController.refreshStates()
+                    
                     self.statesTableView.reloadData()
                     self.debtsTableView.reloadData()
                 }
